@@ -1,0 +1,31 @@
+.not-found {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .text {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 4rem;
+        font-weight: bold;
+        text-decoration: none;
+        animation: spacex 6s;
+        transform: scale(2);
+        color: rgba(0, 0, 0, 0.367);
+        &:hover {
+            color: black;
+        }
+    }
+}
+
+@keyframes spacex {
+    0% {
+        color: rgba(0, 0, 0, 0.673);
+        transform: scale(1);
+    }
+    100% {
+        color: black;
+        transform: scale(2);
+    }
+}

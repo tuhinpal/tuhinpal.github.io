@@ -1,0 +1,176 @@
+.projects_loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    .loader_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+        padding: 20px;
+        height: 100%;
+        border-radius: 10px;
+        background-color: rgba(236, 236, 236, 0.449);
+        .big_bar {
+            width: 80%;
+            height: 2rem;
+            border-radius: 8px;
+            margin: 2rem;
+            animation: loading 1s infinite;
+        }
+    }
+}
+
+@keyframes loading {
+    0% {
+        background-color: rgb(255, 255, 255);
+    }
+    100% {
+        background-color: rgba(174, 174, 174, 0.381);
+    }
+}
+
+.projects_header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    text-align: center;
+    h1 {
+        transform: translate(0, 2rem);
+        color: black;
+        font-size: 2rem;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    p {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-family: Poppins;
+        font-weight: 200;
+        max-width: 400px;
+        color: rgba(0, 0, 0, 0.809);
+        transform: translate(0, .6rem);
+        .gh {
+            text-decoration: none;
+            &:hover {
+                font-weight: bold;
+                color: rgba(0, 0, 0, 0.904);
+            }
+        }
+    }
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem auto;
+    color: black;
+    padding: 20px;
+    background: rgba(236, 236, 236, 0.449);
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    overflow: hidden;
+    .image {
+        position: relative;
+        height: 310px;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            vertical-align: middle;
+            border-radius: 10px;
+        }
+    }
+    .content {
+        padding: 2.2rem;
+        position: relative;
+        h1 {
+            margin: 0;
+            font-weight: bold;
+            font-size: 2.5rem;
+        }
+        .usedlang {
+            height: 2rem;
+            width: 2rem;
+            transform: translate(0, 4px);
+        }
+        .action {
+            margin-top: 2rem;
+            .btn {
+                background-color: #000000;
+                border-radius: 5px;
+                text-align: center;
+                border: 2px solid #000000;
+                color: #ffffff;
+                display: inline-block;
+                font-size: 18px;
+                font-weight: bolder;
+                margin: 0;
+                margin-right: .5rem;
+                padding: 6px 8px;
+                text-decoration: none;
+                font-family: monospace;
+                &:hover {
+                    background: rgba(236, 236, 236, 0.449);
+                    color: #000000;
+                }
+            }
+        }
+    }
+    p {
+        width: 100%;
+        position: relative;
+        margin: 1rem 0 0;
+        height: 100px;
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    &:hover {
+        box-shadow: 0 2px 4rem rgba(0, 0, 0, 0.1);
+        animation: zoomup .3s;
+        transform: scale(1.03);
+    }
+}
+
+@media (min-width: 640px) {
+    .project {
+        flex-direction: row;
+        max-width: 75%;
+        .content {
+            flex-basis: 60%;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .project {
+        padding: 1em;
+        .content {
+            padding: 1rem;
+        }
+        .image {
+            position: relative;
+            z-index: 0;
+            height: 300px;
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 99%;
+            }
+        }
+    }
+    .projects_loading {
+        .loader_container {
+            width: 80%;
+        }
+    }
+}

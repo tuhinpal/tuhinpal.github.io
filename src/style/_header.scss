@@ -1,0 +1,63 @@
+.header {
+    margin: 0;
+    height: 9vh;
+    min-height: 3.7rem;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    .title {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 2rem;
+        padding: 0;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+        font-size: 1.8rem;
+        font-family: 'Courier New', Courier, monospace;
+        &:hover {
+            .gerua {
+                color: #FF9933;
+            }
+            .sobuj {
+                color: #138808;
+            }
+        }
+    }
+    .nav {
+        margin-top: auto;
+        margin-bottom: auto;
+        display: inline-flex;
+        margin-right: .8rem;
+        .item {
+            margin-right: 1.2rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 18px;
+            font-weight: 100;
+            text-decoration: none;
+            color: white;
+            &:hover {
+                font-weight: bold;
+                background-blend-mode: luminosity;
+            }
+        }
+    }
+}
+
+.float {
+    display: none;
+}
+
+.close {
+    display: none;
+}
+
+.items {
+    display: none;
+    .mitem {
+        display: none;
+        ms {
+            display: none;
+        }
+    }
+}

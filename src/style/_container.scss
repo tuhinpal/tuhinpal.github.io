@@ -1,0 +1,120 @@
+.container {
+    display: flex;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.4;
+    margin-top: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding: 0;
+    h1 {
+        font-size: 1em;
+        color: rgb(0, 0, 0);
+        margin: 4em 0 0 0;
+        font-family: 'Courier New', Courier, monospace;
+        .geruya {
+            &:hover {
+                color: #FF9933;
+            }
+        }
+        .sada {
+            &:hover {
+                color: #ebebeb;
+                background-blend-mode: color-burn;
+            }
+        }
+        .sobuj {
+            &:hover {
+                color: #138808;
+            }
+        }
+    }
+    .button {
+        background-color: #000000;
+        width: 10rem;
+        text-align: center;
+        border: 2px solid #000000;
+        color: #ffffff;
+        display: inline-block;
+        font-size: 18px;
+        font-weight: bolder;
+        margin: 0;
+        padding: 12px 32px 14px 32px;
+        text-decoration: none;
+        font-family: monospace;
+        &:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+    }
+    p {
+        font-size: 1.4rem;
+        color: rgba(0, 0, 0, 0.292);
+        font-family: Poppins;
+        max-width: 70%;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        a {
+            color: rgba(0, 0, 0, 0.292);
+            text-decoration: none;
+            &:hover {
+                color: rgba(0, 0, 0, 0.796);
+            }
+        }
+    }
+    .imagectnr {
+        padding-right: 5.3rem;
+        .img {
+            border-radius: .5rem;
+            width: 125%;
+            opacity: 0.6;
+        }
+    }
+    .social {
+        margin-top: 1.2rem;
+        .item {
+            padding: .6rem;
+            border-radius: 5px;
+            text-align: center;
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.884);
+            }
+        }
+        .gh {
+            color: black;
+            &:hover {
+                color: white;
+                background-color: rgba(0, 0, 0, 0.884);
+            }
+        }
+        .tw {
+            color: #00abee;
+            &:hover {
+                color: white;
+                background-color: #00abeed0;
+            }
+        }
+        .ln {
+            color: #0e76a8;
+            &:hover {
+                color: white;
+                background-color: #0e77a8b8;
+            }
+        }
+        .yt {
+            color: #FF0000;
+            &:hover {
+                color: white;
+                background-color: #ff0000d7;
+            }
+        }
+        .tg {
+            color: #0088cc;
+            &:hover {
+                color: white;
+                background-color: #0088ccad;
+            }
+        }
+    }
+}

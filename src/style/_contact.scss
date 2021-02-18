@@ -1,0 +1,105 @@
+.contact {
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ._form_ {
+        width: 70%;
+        height: 100%;
+        color: black;
+        h1 {
+            font-family: monospace;
+            font-size: 3rem;
+        }
+        h2 {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        select {
+            width: 100%;
+            height: 2.5rem;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            border: 2px solid black;
+            padding-left: 1rem;
+            font-family: monospace;
+            font-weight: bolder;
+        }
+        .text {
+            width: calc(100% - 2.1rem);
+            height: 2rem;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            border: 2px solid black;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            font-family: monospace;
+            font-weight: bolder;
+        }
+        .message {
+            width: calc(100% - 2.1rem);
+            height: 6rem;
+            border-radius: 10px;
+            font-size: 1.3rem;
+            border: 2px solid black;
+            padding: 1rem;
+            font-family: monospace;
+            margin-bottom: 2rem;
+        }
+        .button {
+            background-color: #000000;
+            width: 100%;
+            margin-bottom: 3rem;
+            text-align: center;
+            border: 2px solid #000000;
+            color: #ffffff;
+            display: inline-block;
+            font-size: 18px;
+            font-weight: bolder;
+            padding: 12px 32px 14px 32px;
+            text-decoration: none;
+            font-family: monospace;
+            &:hover {
+                background-color: #ffffff;
+                color: #000000;
+            }
+        }
+        .actionbutton {
+            background-color: #403e3e;
+            width: 100%;
+            margin-bottom: 3rem;
+            text-align: center;
+            border: 2px solid #403e3e;
+            color: #ffffff;
+            display: inline-block;
+            font-size: 18px;
+            font-weight: bolder;
+            padding: 12px 32px 14px 32px;
+            text-decoration: none;
+            font-family: monospace;
+        }
+        .error {
+            border: 2px solid rgb(228, 0, 0);
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .contact {
+        ._form_ {
+            width: 75%;
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .contact {
+        margin-top: 2rem;
+        ._form_ {
+            width: 85%;
+            textarea {
+                padding: .6rem;
+            }
+        }
+    }
+}
