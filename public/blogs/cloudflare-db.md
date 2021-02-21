@@ -137,7 +137,4 @@ else if (request.method == "DELETE") {
 
 ### I implimented some extra features and the Final Output looks like [this](https://github.com/cachecleanerjeet/CloudflareDB "this").
 
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v9.0&appId=719870305435506&autoLogAppEvents=1" nonce="yns5dLOD"></script>
-<div class="fb-comments" data-href="https://thetuhin.com/#/blog/cloudflare-db" data-width="" data-numposts="5"></div>
+##  Hope you loved it 💗
