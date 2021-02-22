@@ -13,6 +13,7 @@
 const KEY = ""; // Key for POST Request of update
 const BOT_TOKEN = ""; // TelegramBot Token
 const MY_TELEGRAM_ID = ""; // Telegram UserID (Make sure the bot was started using /start sommand)
+const RC_SECRET = ""; // Recaptcha Secret
 
 async function handleRequest(request) {
 
@@ -53,13 +54,15 @@ async function handleRequest(request) {
                 status: 200,
                 headers
             })
-        } else if (Loc == '/contact') { // Endpoint /contact
+        } else if (Loc == '/contact') {
             var GetmsgData = await request.json();
             var Getname = GetmsgData.name;
             var Getreason = GetmsgData.reason;
             var Getemail = GetmsgData.email;
             var Getmessage = GetmsgData.message;
-            if (Getname == undefined && Getreason == undefined && Getemail == undefined && Getmessage == undefined) {
+            var Getrctoken = GetmsgData.recaptcha_token;
+
+            if (Getname == undefined && Getreason == undefined && Getemail == undefined && Getmessage == undefined && Getrctoken == undefined) {
                 return new Response(JSON.stringify({
                     status: false,
                     msg: "Error, Required all Fields"
@@ -68,33 +71,51 @@ async function handleRequest(request) {
                     headers
                 })
             } else {
-                var sendmessage = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-                    body: JSON.stringify({
-                        chat_id: MY_TELEGRAM_ID,
-                        text: `<b>New Contact Request Recieved</b>\n\n<b>IP: </b><code>${request.headers.get("cf-connecting-ip")}</code>\n<b>Name: </b><code>${Getname}</code>\n<b>Reason: </b>${Getreason}\n<b>Email: </b>${Getemail}\n<b>Message: </b><code>${Getmessage}</code>\n<b>Total Message: </b><code>${GetmsgData.totalmessage}</code>`,
-                        parse_mode: 'HTML'
-                    }),
-                    method: "POST",
-                    headers: {
-                        "content-type": "application/json",
-                    },
+                var formdata = new FormData();
+                formdata.append("secret", RC_SECRET);
+                formdata.append("response", Getrctoken);
+                var CheckRCToken = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+                    method: 'POST',
+                    body: formdata
                 })
-                var sendmessage = await sendmessage.json()
-                if (sendmessage.ok == true) {
-                    var status = {
-                        status: true,
-                        msg: "Message sent successfully"
-                    };
-                } else {
-                    var status = {
+                var CheckRCToken = await CheckRCToken.json()
+                if (CheckRCToken.success == false) {
+                    return new Response(JSON.stringify({
                         status: false,
-                        msg: "Error while sending the message"
-                    };
+                        msg: "Recaptcha Error",
+                    }), {
+                        status: 200,
+                        headers
+                    })
+                } else {
+                    var sendmessage = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                        body: JSON.stringify({
+                            chat_id: MY_TELEGRAM_ID,
+                            text: `<b>New Contact Request Recieved</b>\n\n<b>IP: </b><code>${request.headers.get("cf-connecting-ip")}</code>\n<b>Name: </b><code>${Getname}</code>\n<b>Reason: </b>${Getreason}\n<b>Email: </b>${Getemail}\n<b>Message: </b><code>${Getmessage}</code>\n<b>Total Message: </b><code>${GetmsgData.totalmessage}</code>`,
+                            parse_mode: 'HTML'
+                        }),
+                        method: "POST",
+                        headers: {
+                            "content-type": "application/json",
+                        },
+                    })
+                    var sendmessage = await sendmessage.json()
+                    if (sendmessage.ok == true) {
+                        var status = {
+                            status: true,
+                            msg: "Message sent successfully"
+                        };
+                    } else {
+                        var status = {
+                            status: false,
+                            msg: "Error while sending the message"
+                        };
+                    }
+                    return new Response(JSON.stringify(status), {
+                        status: 200,
+                        headers
+                    })
                 }
-                return new Response(JSON.stringify(status), {
-                    status: 200,
-                    headers
-                })
             }
         } else {
             return new Response(JSON.stringify({

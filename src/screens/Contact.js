@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import { API_URL } from '../config';
+import { API_URL, RECAPTCHA_API_TOKEN } from '../config';
+import ReCAPTCHA from "react-google-recaptcha";
+
 const emailexpression = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 export default class Contact extends React.Component {
@@ -15,7 +17,8 @@ export default class Contact extends React.Component {
             submited: false,
             nameClass: 'text',
             emailClass: 'text',
-            messageClass: 'message'
+            messageClass: 'message',
+            recaptchatoken: 'hold_on'
         }
         this.NameH = this.NameH.bind(this);
         this.EmailH = this.EmailH.bind(this);
@@ -23,6 +26,7 @@ export default class Contact extends React.Component {
         this.MessageH = this.MessageH.bind(this);
         this.Submit = this.Submit.bind(this);
     }
+
 
     NameH(event) {
         this.setState({
@@ -55,22 +59,30 @@ export default class Contact extends React.Component {
             this.setState({ messageClass: 'message error' })
         } else {
             var getEmailtime = localStorage.getItem('messageCount')
-            if (getEmailtime === null) {
-                localStorage.setItem("messageCount", 1)
-            } else {
-                localStorage.setItem("messageCount", Number(getEmailtime) + 1)
-            }
-            this.setState({ submited: true })
-            axios.post(`${API_URL}/contact`, {
-                name: this.state.name,
-                email: this.state.email,
-                message: this.state.message,
-                reason: this.state.reason,
-                totalmessage: localStorage.getItem('messageCount')
-            })
-                .then(res => {
-                    this.setState({ submited: 'sent' })
-                    console.log(res.data);
+            this.captchaDemo.execute()
+                .then(cb => {
+                    if (getEmailtime === null) {
+                        localStorage.setItem("messageCount", 1)
+                    } else {
+                        localStorage.setItem("messageCount", Number(getEmailtime) + 1)
+                    }
+                    this.setState({ submited: true })
+                    axios.post(`${API_URL}/contact`, {
+                        name: this.state.name,
+                        email: this.state.email,
+                        message: this.state.message,
+                        reason: this.state.reason,
+                        recaptcha_token: this.state.recaptchatoken,
+                        totalmessage: localStorage.getItem('messageCount')
+                    })
+                        .then(res => {
+                            console.log(res.data);
+                            if (res.data.status) {
+                                this.setState({ submited: 'sent' })
+                            } else if (res.data.msg === "Recaptcha Error") {
+                                this.setState({ submited: 're_error' })
+                            }
+                        })
                 })
         }
     }
@@ -101,8 +113,16 @@ export default class Contact extends React.Component {
                     <h2>I wanted to tell you this:
                 </h2>
                     <textarea className={this.state.messageClass} value={this.state.message} onChange={this.MessageH}></textarea>
-                    {!this.state.submited ? <button onClick={this.Submit} className="button">Send to Tuhin</button> : this.state.submited === 'sent' ? <button className="actionbutton">Sent 🎉</button> : <button className="actionbutton">Sending ☁</button>}
+                    {!this.state.submited ? <button onClick={this.Submit} className="button">Send to Tuhin</button> : this.state.submited === 'sent' ? <button className="actionbutton">Sent 🎉</button> : this.state.submited === 're_error' ? <button className="actionbutton">Failed to Sent (ReCaptcha Error)</button> : <button className="actionbutton">Sending ☁</button>}
                 </div>
+                <ReCAPTCHA
+                    ref={(captcha) => { this.captchaDemo = captcha; }}
+                    size="invisible"
+                    sitekey={RECAPTCHA_API_TOKEN}
+                    onChange={(token) => {
+                        this.setState({ recaptchatoken: token })
+                    }}
+                />
             </div>
         );
     }
