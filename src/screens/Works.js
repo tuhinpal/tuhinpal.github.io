@@ -4,16 +4,19 @@ import { Link } from 'react-router-dom';
 import { API_URL } from '../config';
 
 export default class Works extends React.Component {
-    state = {
-        projects: <div className="projects_loading">
-            <div className="loader_container">
-                <div className="big_bar">
-                </div>
-                <div className="big_bar">
+    constructor(props) {
+        super(props);
+        this.state = {
+            projects: <div className="projects_loading">
+                <div className="loader_container">
+                    <div className="big_bar">
+                    </div>
+                    <div className="big_bar">
+                    </div>
                 </div>
             </div>
-        </div>
-    };
+        }
+    }
 
     componentDidMount() {
         document.title = "Works | Tuhin";

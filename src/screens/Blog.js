@@ -4,17 +4,20 @@ import { Link } from 'react-router-dom';
 import { API_URL } from '../config';
 
 export default class Blog extends React.Component {
-    state = {
-        loading: <div className="projects_loading">
-            <div className="loader_container">
-                <div className="big_bar">
+    constructor(props) {
+        super(props);
+        this.state = {
+            loading: <div className="projects_loading">
+                <div className="loader_container">
+                    <div className="big_bar">
+                    </div>
+                    <div className="big_bar">
+                    </div>
                 </div>
-                <div className="big_bar">
-                </div>
-            </div>
-        </div>,
-        blogs: ''
-    };
+            </div>,
+            blogs: ''
+        }
+    }
 
     componentDidMount() {
         document.title = `Blog | Tuhin`;

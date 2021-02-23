@@ -6,17 +6,20 @@ import gfm from 'remark-gfm';
 
 
 export default class SingleBlog extends React.Component {
-    state = {
-        blog: <div className="projects_loading">
-            <br /><br /><br /><br />
-            <div className="loader_container">
-                <div className="big_bar">
-                </div>
-                <div className="big_bar">
+    constructor(props) {
+        super(props);
+        this.state = {
+            blog: <div className="projects_loading">
+                <br /><br /><br /><br />
+                <div className="loader_container">
+                    <div className="big_bar">
+                    </div>
+                    <div className="big_bar">
+                    </div>
                 </div>
             </div>
-        </div>
-    };
+        }
+    }
 
     componentDidMount() {
         document.title = `Blog | Tuhin`;

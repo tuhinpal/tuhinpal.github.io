@@ -12,11 +12,15 @@ import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 gsap.registerPlugin(CSSRulePlugin);
 
 export default class App extends React.Component {
-  state = {
-    mmenu: '',
-    eyeblink: new TimelineMax()
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      mmenu: '',
+      eyeblink: new TimelineMax()
+    }
+    this.mmenuF = this.mmenuF.bind(this)
   }
-  mmenuF = this.mmenuF.bind(this)
 
   mmenuF() {
     if (this.state.mmenu === '') {
@@ -29,6 +33,7 @@ export default class App extends React.Component {
       }, 500);
     }
   }
+
   componentDidMount() { // GSAP Animation
     this.state.eyeblink.to(CSSRulePlugin.getRule('body:before'), 0.2, {
       cssRule: {

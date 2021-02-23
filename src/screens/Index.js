@@ -4,8 +4,11 @@ import { Link } from 'react-router-dom';
 
 export default class Index extends React.Component {
 
-    state = {
-        title: 1
+    constructor(props) {
+        super(props);
+        this.state = {
+            title: 1
+        }
     }
 
     componentDidMount() {
