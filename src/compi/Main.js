@@ -2,7 +2,6 @@ import * as React from "react";
 import { useState } from "react";
 import "../style/style.scss";
 import { Link } from "gatsby";
-import '../style/singleblog.scss';
 
 export default () => {
   const [mmenu, setMmenu] = useState("");

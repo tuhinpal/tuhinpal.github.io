@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import '../style/404.scss';
 
 export default () => {
   return (
