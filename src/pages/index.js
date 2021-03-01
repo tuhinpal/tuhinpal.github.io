@@ -2,7 +2,6 @@ import * as React from "react";
 import Main from "../compi/Main";
 import me from "../images/me.jpg";
 import { Link } from "gatsby";
-import '../style/index.scss';
 
 export default () => {
   return (
