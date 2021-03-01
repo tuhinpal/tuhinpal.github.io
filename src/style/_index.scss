@@ -33,6 +33,7 @@
     .button {
         background-color: #000000;
         width: 10rem;
+        border-radius: 8px;
         text-align: center;
         border: 2px solid #000000;
         color: #ffffff;
@@ -64,10 +65,12 @@
         }
     }
     .imagectnr {
-        padding-right: 5.3rem;
+        width: 90%;
+        height: 90%;
         .img {
             border-radius: .5rem;
-            width: 125%;
+            width: 92%;
+            margin-left: auto;
             opacity: 0.6;
         }
     }

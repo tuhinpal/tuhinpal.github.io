@@ -1,6 +1,12 @@
-# Install MongoDB on VPS
-##  ⌚ 12/02/2021 🧔 Tuhin Kanti Pal 
-![MongoDB](https://miro.medium.com/max/640/1*-ivYkzeuYJedPKdEdfnNlg.png "MongoDB")
+---
+title: "Install MongoDB on VPS"
+time: 10
+date: 2021-02-12
+description: "In this blog I will show you how to install MongoDB on VPS, I will use GCP's Server and install MongoDB on it, also will allow remote connections"
+category: "Database"
+author: "Tuhin Kanti Pal"
+imgurl: "https://miro.medium.com/max/640/1*-ivYkzeuYJedPKdEdfnNlg.png"
+---
 
 **In** this Blog I'm gonna show you how can you install MongoDB on Your server. Some times free mongodb atlas becone slow that's why we are going to install mongodb on a vps. Firstly i created a vps and expose its `27017` and `22` port. Then I connected it with a ssh client.
 
