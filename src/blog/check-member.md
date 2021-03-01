@@ -1,6 +1,12 @@
-# Check someone is channel member or not
-##  ⌚ 17/02/2021 🧔 Tuhin Kanti Pal 
-![Telegram](https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1024px-Telegram_logo.svg.png "Telegram")
+---
+title: "Check Member"
+time: 10
+date: 2021-02-17
+description: "In this Blog let's talk about how to check someone is channel member or not before using your bot. We will verify User Id from your channel member's database"
+category: "Telegram"
+author: "Tuhin Kanti Pal"
+imgurl: "https://telegra.ph/file/29989b0f6efe81fed5da2.png"
+---
 
 **In** this Blog let's talk about how to check someone is channel member or not before using your bot. If someone use a bot, bot will recieve the User ID of that user. We will verify that id from your channel member's database.
 
