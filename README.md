@@ -8,12 +8,13 @@
     git clone https://github.com/cachecleanerjeet/cachecleanerjeet.github.io.git
     ```
 
-2.  **Start developing.**
+2.  **Install dependencies & Start developing.**
 
     Go into your new site's directory and fire it up.
 
     ```shell
     cd cachecleanerjeet.github.io/
+    npm install
     npm run develop
     ```
 

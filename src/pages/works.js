@@ -1,6 +1,7 @@
 import * as React from "react";
 import Main from "../compi/Main";
 import { graphql, Link } from "gatsby";
+import '../style/works.scss';
 
 export const query = graphql`
   query graphAllWorks {

@@ -1,5 +1,6 @@
 import * as React from "react";
 import Main from "../compi/Main";
+import '../style/skillsets.scss';
 import JavascriptImage from "../images/icons/javascript.svg";
 import NodeImage from "../images/icons/node-brands.svg";
 import MongoImage from "../images/icons/mongodb.svg";
