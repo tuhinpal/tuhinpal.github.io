@@ -1,6 +1,7 @@
 import { graphql, Link } from "gatsby";
 import React from "react";
 import Main from "../compi/Main";
+import '../style/blog.scss';
 
 export const query = graphql`
   query graphAllBlogs {

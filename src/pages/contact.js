@@ -3,6 +3,7 @@ import { useState } from "react";
 import Main from "../compi/Main";
 import { API_URL, RECAPTCHA_API_TOKEN } from "../config";
 import ReCAPTCHA from "react-google-recaptcha";
+import '../style/contact.scss';
 
 export default () => {
   const [contact_name, setContact_name] = useState("");
