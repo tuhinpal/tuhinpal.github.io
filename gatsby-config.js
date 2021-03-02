@@ -11,10 +11,15 @@ module.exports = {
         {
             resolve: "gatsby-plugin-google-analytics",
             options: {
-                trackingId: "G-WM81TJM2YQ",
+                trackingId: "261661907",
             },
         },
-        "gatsby-plugin-offline",
+        {
+            resolve: `gatsby-plugin-offline`,
+            options: {
+                precachePages: [`/`, `/skillsets/`, `contact/`],
+            },
+        },
         {
             resolve: "gatsby-plugin-manifest",
             options: {
