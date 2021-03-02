@@ -11,18 +11,18 @@ module.exports = {
         {
             resolve: "gatsby-plugin-google-analytics",
             options: {
-                trackingId: "261661907",
-            },
-        },
-        {
-            resolve: `gatsby-plugin-offline`,
-            options: {
-                precachePages: [`/`, `/skillsets/`, `contact/`],
+                trackingId: "G-WM81TJM2YQ",
             },
         },
         {
             resolve: "gatsby-plugin-manifest",
             options: {
+                name: "Tuhin",
+                short_name: "Tuhin",
+                start_url: "/",
+                background_color: "#ffffff",
+                theme_color: "#000000",
+                display: "standalone",
                 icon: "src/images/logo.png",
             },
         },
