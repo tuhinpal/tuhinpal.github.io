@@ -1,7 +1,6 @@
 module.exports = {
     siteMetadata: {
         title: "Tuhin",
-        titleTemplate: "%s · The Real Hero",
         description: "I'm Tuhin Kanti Pal. I'm a programmer, Security Researcher and Opensource Enthusiast.",
         url: "https://thetuhin.com",
         twitterUsername: "@jeeetpaul",
