@@ -9,9 +9,11 @@ module.exports = {
     plugins: [
         "gatsby-plugin-sass",
         {
-            resolve: "gatsby-plugin-google-analytics",
+            resolve: `gatsby-plugin-google-gtag`,
             options: {
-                trackingId: "G-WM81TJM2YQ",
+                trackingIds: [
+                    "G-WM81TJM2YQ",
+                ],
             },
         },
         {
@@ -19,7 +21,7 @@ module.exports = {
             options: {
                 name: "Tuhin",
                 short_name: "Tuhin",
-                start_url: "/",
+                start_url: "/?device=webapp",
                 background_color: "#ffffff",
                 theme_color: "#000000",
                 display: "standalone",
