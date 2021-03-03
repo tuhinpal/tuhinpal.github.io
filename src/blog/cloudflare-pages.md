@@ -11,7 +11,7 @@ imgurl: "https://telegra.ph/file/74fce4c6d76c7db7e4bfa.png"
 Cloudflare just lanuched beta version of Cloudflare Pages. It is now available for everyone. In this Blog we will discuss about it's pros and cons also we will setup a site using cloudflare pages.
 
 ### Pros :
-- Very first & Globally Available
+- Very fast & Globally Available
 - Github integration
 - Seemless page build for each commit
 - Custom domain & SSL (Not a shared one)
