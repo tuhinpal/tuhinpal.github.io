@@ -57,6 +57,35 @@
         }
     },
     {
+        "project_name": "Firecdn",
+        "project_language_image": "https://cdn.jsdelivr.net/npm/simple-icons@3.2.0/icons/javascript.svg",
+        "project_language": "Javascript",
+        "project_image": "https://firebasestorage.googleapis.com/v0/b/cdn-tuhin.appspot.com/o/1615103175fbh?alt=media&token=46bc27cb-2180-468c-98aa-8f3607ff856b",
+        "project_description": "Firecdn is a low latency cdn using firebase, Anyone can make their own cdn. It will be pretty much handy and very fast because they can choose server location.",
+        "project_action": {
+            "website": {
+                "available": false,
+                "content": ""
+            },
+            "case_study": {
+                "available": false,
+                "content": ""
+            },
+            "github": {
+                "available": true,
+                "content": "https://github.com/cachecleanerjeet/Firecdn"
+            },
+            "demo": {
+                "available": true,
+                "content": "https://cachecleanerjeet.github.io/Firecdn/"
+            },
+            "youtube": {
+                "available": false,
+                "content": ""
+            }
+        }
+    },
+    {
         "project_name": "Readme Stats",
         "project_language_image": "https://cdn.jsdelivr.net/npm/simple-icons@3.2.0/icons/javascript.svg",
         "project_language": "Javascript",
@@ -78,6 +107,35 @@
             "demo": {
                 "available": true,
                 "content": "https://github-stats-alpha.vercel.app/api/?username=cachecleanerjeet"
+            },
+            "youtube": {
+                "available": false,
+                "content": ""
+            }
+        }
+    },
+    {
+        "project_name": "JiosaavnAPI",
+        "project_language_image": "https://cdn.jsdelivr.net/npm/simple-icons@3.2.0/icons/javascript.svg",
+        "project_language": "Javascript",
+        "project_image": "https://firebasestorage.googleapis.com/v0/b/cdn-tuhin.appspot.com/o/16151046938kdf?alt=media&token=00d465e0-0817-4e7b-bcc4-f6ec914a4465",
+        "project_description": "India's best Song Streaming Platform Jiosaavn's Lightweight Unofficial API, which can be deployed with vercel for Free.",
+        "project_action": {
+            "website": {
+                "available": false,
+                "content": ""
+            },
+            "case_study": {
+                "available": false,
+                "content": ""
+            },
+            "github": {
+                "available": true,
+                "content": "https://github.com/cachecleanerjeet/jiosaavnapi"
+            },
+            "demo": {
+                "available": true,
+                "content": "https://jiosaavn-api.vercel.app/"
             },
             "youtube": {
                 "available": false,
