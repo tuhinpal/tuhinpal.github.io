@@ -10,6 +10,8 @@ import DockerImage from "../images/icons/docker.svg";
 import FirebaseImage from "../images/icons/firebase.svg";
 import NextImage from "../images/icons/next-dot-js.svg";
 import PythonImage from "../images/icons/python.svg";
+import GatsbyImage from "../images/icons/gatsby.svg";
+import DenoImage from "../images/icons/deno.svg"
 
 export default () => {
   return (
@@ -31,13 +33,13 @@ export default () => {
           >
             <img src={JavascriptImage} alt="Javascript" />
           </a>
-          <a href="https://nodejs.org/" className="card">
-            <img
-              src={NodeImage}
-              target="_blank"
-              rel="noreferrer"
-              alt="NodeJS"
-            />
+          <a
+            href="https://nodejs.org/"
+            target="_blank"
+            rel="noreferrer"
+            className="card"
+          >
+            <img src={NodeImage} alt="NodeJS" />
           </a>
           <a
             href="https://www.mongodb.com/"
@@ -102,6 +104,22 @@ export default () => {
             className="card"
           >
             <img src={PythonImage} alt="Python" />
+          </a>
+          <a
+            href="https://www.gatsbyjs.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="card"
+          >
+            <img src={GatsbyImage} alt="Gatsby" />
+          </a>
+          <a
+            href="https://deno.land/"
+            target="_blank"
+            rel="noreferrer"
+            className="card"
+          >
+            <img src={DenoImage} alt="Deno" />
           </a>
         </div>
       </div>

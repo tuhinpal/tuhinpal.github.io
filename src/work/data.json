@@ -1,4 +1,5 @@
-[{
+[
+    {
         "project_name": "CloudflareDB",
         "project_language_image": "https://cdn.jsdelivr.net/npm/simple-icons@3.2.0/icons/javascript.svg",
         "project_language": "Javascript",
@@ -136,6 +137,35 @@
             "demo": {
                 "available": true,
                 "content": "https://jiosaavn-api.vercel.app/"
+            },
+            "youtube": {
+                "available": false,
+                "content": ""
+            }
+        }
+    },
+    {
+        "project_name": "Gaana Downlader Extension",
+        "project_language_image": "https://cdn.jsdelivr.net/npm/simple-icons@3.2.0/icons/javascript.svg",
+        "project_language": "Javascript",
+        "project_image": "https://firebasestorage.googleapis.com/v0/b/cdn-tuhin.appspot.com/o/1616588948o8ai?alt=media&token=0e897049-9f41-41e1-ac8a-f3d5748ea81a",
+        "project_description": "Download songs from gaana.com, or enjoy an ad free experience. This extension can do all premium stuffs for free.",
+        "project_action": {
+            "website": {
+                "available": false,
+                "content": ""
+            },
+            "case_study": {
+                "available": false,
+                "content": ""
+            },
+            "github": {
+                "available": true,
+                "content": "https://github.com/cachecleanerjeet/gaana-downloader-extension"
+            },
+            "demo": {
+                "available": false,
+                "content": ""
             },
             "youtube": {
                 "available": false,
