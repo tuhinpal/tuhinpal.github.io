@@ -16,17 +16,12 @@ export default () => {
             <span className="sobuj">Pal</span>.
           </h1>
           <p>
-            I'm a programmer, Security Researcher and Opensource Enthusiast. I
-            have Researched about many OTTs and founded many bugs. I have
-            created some awesome Open Source projects, They are available on my{" "}
-            <a
-              target="_blank"
-              href="https://github.com/cachecleanerjeet"
-              rel="noreferrer"
-            >
-              Github
-            </a>
-            . Yeah, I love Monospace.
+            I'm a programmer, Security Researcher and Opensource Enthusiast. I am potential on Frontend and Backend development with Javascript & Typescript.
+            See my{" "}
+            <Link to="../../works">
+              Skillsets
+            </Link>
+            {" "} & Projects for more.
           </p>
           <Link to="../../works" className="button">
             View my Works
