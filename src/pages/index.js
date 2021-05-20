@@ -18,10 +18,18 @@ export default () => {
           <p>
             I'm a programmer, Security Researcher and Opensource Enthusiast. I am potential on Frontend and Backend development with Javascript & Typescript.
             See my{" "}
-            <Link to="../../works">
+            <Link to="../../skillsets">
               Skillsets
             </Link>
-            {" "} & Projects for more.
+            {" "} & {" "}
+            <a
+              target="_blank"
+              href="https://github.com/cachecleanerjeet"
+              rel="noreferrer"
+            >
+              Projects
+            </a>
+            {" "} for more.
           </p>
           <Link to="../../works" className="button">
             View my Works
