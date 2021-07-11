@@ -13,7 +13,7 @@ import PythonImage from "../images/icons/python.svg";
 import GatsbyImage from "../images/icons/gatsby.svg";
 import DenoImage from "../images/icons/deno.svg"
 
-export default () => {
+export default function Skillsets() {
   return (
     <main>
       <title>Skillsets | Tuhin</title>

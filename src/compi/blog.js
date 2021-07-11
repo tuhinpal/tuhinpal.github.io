@@ -17,7 +17,7 @@ export const query = graphql`
   }
 `;
 
-export default ({ data }) => {
+export default function blog({ data }) {
   const { body, frontmatter } = data.mdx;
   return (
     <main>

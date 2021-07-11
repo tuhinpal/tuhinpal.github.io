@@ -3,7 +3,7 @@ import Main from "../compi/Main";
 import me from "../images/me.jpg";
 import { Link } from "gatsby";
 
-export default () => {
+export default function Index() {
   return (
     <main>
       <title>Tuhin</title>

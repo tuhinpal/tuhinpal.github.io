@@ -22,7 +22,7 @@ export const query = graphql`
   }
 `;
 
-export default ({ data }) => {
+export default function Blog({ data }) {
   return (
     <main>
       <title>Blog | Tuhin</title>

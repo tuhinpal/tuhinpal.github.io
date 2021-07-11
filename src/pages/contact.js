@@ -4,7 +4,7 @@ import Main from "../compi/Main";
 import { API_URL, RECAPTCHA_API_TOKEN } from "../config";
 import ReCAPTCHA from "react-google-recaptcha";
 
-export default () => {
+export default function Contact() {
   const [contact_name, setContact_name] = useState("");
   const [contact_reason, setContact_reason] = useState("no-reason");
   const [contact_email, setContact_email] = useState("");
@@ -135,13 +135,13 @@ export default () => {
               Failed to Sent (ReCaptcha Error)
             </button>
           ) : (
-                  <button className="actionbutton">
-                    Sending{" "}
-                    <span role="img" aria-label="cloud">
-                      ☁
+            <button className="actionbutton">
+              Sending{" "}
+              <span role="img" aria-label="cloud">
+                ☁
               </span>
-                  </button>
-                )}
+            </button>
+          )}
         </div>
       </div>
 

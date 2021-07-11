@@ -1,5 +1,34 @@
 [
     {
+        "project_name": "Printit",
+        "project_language_image": "https://cdn.jsdelivr.net/npm/simple-icons@3.2.0/icons/next-dot-js.svg",
+        "project_language": "Javascript",
+        "project_image": "https://printit.work/og.jpg",
+        "project_description": "Printit helps People to print their document effectively, securely and easily and eliminate problems while sharing document to shopkeeper for print.",
+        "project_action": {
+            "website": {
+                "available": true,
+                "content": "https://printit.work/"
+            },
+            "case_study": {
+                "available": false,
+                "content": ""
+            },
+            "github": {
+                "available": false,
+                "content": ""
+            },
+            "demo": {
+                "available": true,
+                "content": "https://printit.work/guides"
+            },
+            "youtube": {
+                "available": true,
+                "content": "https://youtu.be/QUVnUwMbVXQ"
+            }
+        }
+    },
+    {
         "project_name": "CloudflareDB",
         "project_language_image": "https://cdn.jsdelivr.net/npm/simple-icons@3.2.0/icons/javascript.svg",
         "project_language": "Javascript",

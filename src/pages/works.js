@@ -38,7 +38,7 @@ export const query = graphql`
   }
 `;
 
-export default ({ data }) => {
+export default function Works({ data }) {
   return (
     <main>
       <title>Works | Tuhin</title>

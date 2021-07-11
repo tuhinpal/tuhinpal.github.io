@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link } from "gatsby";
 import "../style/not-found.scss";
 
-export default () => {
+export default function Fourofour() {
   return (
     <main>
       <title>404 | Tuhin</title>

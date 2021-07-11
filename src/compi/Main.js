@@ -3,7 +3,7 @@ import { useState } from "react";
 import "../style/style.scss";
 import { Link } from "gatsby";
 
-export default () => {
+export default function Index() {
   const [mmenu, setMmenu] = useState("");
 
   const mmenuF = () => {
