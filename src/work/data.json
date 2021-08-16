@@ -29,6 +29,64 @@
         }
     },
     {
+        "project_name": "VideoHire",
+        "project_language_image": "https://cdn.jsdelivr.net/npm/simple-icons@3.2.0/icons/next-dot-js.svg",
+        "project_language": "Javascript",
+        "project_image": "https://app.videohire.link/logo/icon.png",
+        "project_description": "Hire remote employees faster, cheaper and fairer with video interviews. Adding one-way video interviews at the beginning of the hiring process saves time, cost and find you most engaged and culturally fit candidates remotely.",
+        "project_action": {
+            "website": {
+                "available": true,
+                "content": "https://videohire.link/"
+            },
+            "case_study": {
+                "available": false,
+                "content": ""
+            },
+            "github": {
+                "available": false,
+                "content": ""
+            },
+            "demo": {
+                "available": false,
+                "content": ""
+            },
+            "youtube": {
+                "available": false,
+                "content": ""
+            }
+        }
+    },
+    {
+        "project_name": "Infospace",
+        "project_language_image": "https://cdn.jsdelivr.net/npm/simple-icons@3.2.0/icons/next-dot-js.svg",
+        "project_language": "Javascript",
+        "project_image": "https://infospace.club/images/front.png",
+        "project_description": "Connect directly with the right decision makers, using largest and most accurate databases and crawlers. (Incomplete)",
+        "project_action": {
+            "website": {
+                "available": true,
+                "content": "https://infospace.club/"
+            },
+            "case_study": {
+                "available": false,
+                "content": ""
+            },
+            "github": {
+                "available": false,
+                "content": ""
+            },
+            "demo": {
+                "available": false,
+                "content": ""
+            },
+            "youtube": {
+                "available": false,
+                "content": ""
+            }
+        }
+    },
+    {
         "project_name": "CloudflareDB",
         "project_language_image": "https://cdn.jsdelivr.net/npm/simple-icons@3.2.0/icons/javascript.svg",
         "project_language": "Javascript",
@@ -253,35 +311,6 @@
             "demo": {
                 "available": false,
                 "content": ""
-            },
-            "youtube": {
-                "available": false,
-                "content": ""
-            }
-        }
-    },
-    {
-        "project_name": "Hoichoi API",
-        "project_language_image": "https://cdn.jsdelivr.net/npm/simple-icons@3.2.0/icons/javascript.svg",
-        "project_language": "Javascript",
-        "project_image": "https://telegra.ph/file/7ccde141eb2d927425fa9.png",
-        "project_description": "Unofficial Hoichoi API written in Javascript. It can Generate Unlimited Download Link or Streaming Link.",
-        "project_action": {
-            "website": {
-                "available": false,
-                "content": ""
-            },
-            "case_study": {
-                "available": false,
-                "content": ""
-            },
-            "github": {
-                "available": true,
-                "content": "https://github.com/cachecleanerjeet/hoichoi-api"
-            },
-            "demo": {
-                "available": true,
-                "content": "https://telegram.dog/hoichoidownloader_bot"
             },
             "youtube": {
                 "available": false,
