@@ -9,9 +9,9 @@ gsap.registerPlugin(CSSRulePlugin);
 
 export default function Index() {
   const [mmenu, setMmenu] = useState("");
-  const eyeblink = new TimelineMax()
 
   useEffect(() => {
+    const eyeblink = new TimelineMax()
     eyeblink.to(CSSRulePlugin.getRule('body:before'), 0.2, {
       cssRule: {
         top: '50%'
