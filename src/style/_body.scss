@@ -15,10 +15,12 @@ body {
         z-index: 100;
     }
     &::before {
+        border-bottom: .2px solid rgb(122, 122, 122);
         top: 0;
         transform: translateY(-100%);
     }
     &::after {
+        border-top: .2px solid rgb(122, 122, 122);
         bottom: 0;
         transform: translateY(100%);
     }

@@ -53,20 +53,20 @@ export default function Index() {
   return (
     <div>
       <div className="header">
-        <Link className="title" to="../../">
+        <Link className="title" to="/">
           <span className="gerua">Tu</span>h<span className="sobuj">in</span>.
         </Link>
         <div className="nav">
-          <Link to="../../works" className="item">
+          <Link to="/works" className="item">
             Works
           </Link>
-          <Link to="../../skillsets" className="item">
+          <Link to="/skillsets" className="item">
             Skillsets
           </Link>
-          <Link to="../../blog" className="item">
+          <Link to="/blog" className="item">
             Blog
           </Link>
-          <Link to="../../contact" className="item">
+          <Link to="/contact" className="item">
             Contact
           </Link>
         </div>
@@ -87,19 +87,19 @@ export default function Index() {
           </div>
           <div className="items">
             <div className="mitem" aria-hidden="true">
-              <Link to="../../" onClick={mmenuF} className="ms">
+              <Link to="/" onClick={mmenuF} className="ms">
                 Home
               </Link>
-              <Link to="../../works" onClick={mmenuF} className="ms">
+              <Link to="/works" onClick={mmenuF} className="ms">
                 Works
               </Link>
-              <Link to="../../skillsets" onClick={mmenuF} className="ms">
+              <Link to="/skillsets" onClick={mmenuF} className="ms">
                 Skillsets
               </Link>
-              <Link to="../../blog" onClick={mmenuF} className="ms">
+              <Link to="/blog" onClick={mmenuF} className="ms">
                 Blog
               </Link>
-              <Link to="../../contact" onClick={mmenuF} className="ms">
+              <Link to="/contact" onClick={mmenuF} className="ms">
                 Contact
               </Link>
             </div>

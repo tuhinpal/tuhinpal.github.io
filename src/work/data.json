@@ -11,8 +11,8 @@
                 "content": "https://printit.work/"
             },
             "case_study": {
-                "available": false,
-                "content": ""
+                "available": true,
+                "content": "/blog/about-printit"
             },
             "github": {
                 "available": false,
@@ -99,7 +99,7 @@
             },
             "case_study": {
                 "available": true,
-                "content": "../../blog/cloudflare-db"
+                "content": "/blog/cloudflare-db"
             },
             "github": {
                 "available": true,

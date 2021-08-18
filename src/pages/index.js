@@ -18,7 +18,7 @@ export default function Index() {
           <p>
             I'm a programmer, Security Researcher and Opensource Enthusiast. I am potential on Frontend and Backend development with Javascript & Typescript.
             See my{" "}
-            <Link to="../../skillsets">
+            <Link to="/skillsets">
               Skillsets
             </Link>
             {" "} & {" "}
@@ -31,7 +31,7 @@ export default function Index() {
             </a>
             {" "} for more.
           </p>
-          <Link to="../../works" className="button">
+          <Link to="/works" className="button">
             View my Works
           </Link>
           <p className="social">

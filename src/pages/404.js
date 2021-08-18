@@ -7,7 +7,7 @@ export default function Fourofour() {
     <main>
       <title>404 | Tuhin</title>
       <div className="not-found">
-        <Link className="text" to="../../">
+        <Link className="text" to="/">
           404
         </Link>
       </div>
