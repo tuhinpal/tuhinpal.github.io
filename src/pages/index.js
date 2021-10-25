@@ -16,20 +16,17 @@ export default function Index() {
             <span className="sobuj">Pal</span>.
           </h1>
           <p>
-            I'm a programmer, Security Researcher and Opensource Enthusiast. I am potential on Frontend and Backend development with Javascript & Typescript.
-            See my{" "}
-            <Link to="/skillsets">
-              Skillsets
-            </Link>
-            {" "} & {" "}
+            I'm a programmer, Security Researcher and Opensource Enthusiast. I
+            am potential on Frontend and Backend development with Javascript &
+            Typescript. See my <Link to="/skillsets">Skillsets</Link> &{" "}
             <a
               target="_blank"
-              href="https://github.com/cachecleanerjeet"
+              href="https://github.com/tuhinpal"
               rel="noreferrer"
             >
               Projects
-            </a>
-            {" "} for more.
+            </a>{" "}
+            for more.
           </p>
           <Link to="/works" className="button">
             View my Works
@@ -37,7 +34,7 @@ export default function Index() {
           <p className="social">
             <a
               target="_blank"
-              href="https://github.com/cachecleanerjeet/"
+              href="https://github.com/tuhinpal/"
               rel="noreferrer"
             >
               <i className="fa fa-github-alt item gh"></i>{" "}
@@ -78,4 +75,4 @@ export default function Index() {
       </div>
     </main>
   );
-};
+}

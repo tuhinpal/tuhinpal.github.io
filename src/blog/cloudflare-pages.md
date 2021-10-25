@@ -11,6 +11,7 @@ imgurl: "https://telegra.ph/file/74fce4c6d76c7db7e4bfa.png"
 Cloudflare just lanuched beta version of Cloudflare Pages. It is now available for everyone. In this Blog we will discuss about it's pros and cons also we will setup a site using cloudflare pages.
 
 ### Pros :
+
 - Very fast & Globally Available
 - Github integration
 - Seemless page build for each commit
@@ -18,6 +19,7 @@ Cloudflare just lanuched beta version of Cloudflare Pages. It is now available f
 - Unlimited Bandwidth (Free Users)
 
 ### Cons :
+
 - No SSR
 
 ### Frameworks presets :
@@ -55,4 +57,4 @@ Cloudflare just lanuched beta version of Cloudflare Pages. It is now available f
 - Give a name & Select framework from presets
 - Hit <code>Save and Deploy</code>
 
-## This website ([This Website](https://thetuhin.com "This Website")) is also using Cloudflare Pages. To Test you can fork [this](https://github.com/cachecleanerjeet/cachecleanerjeet.github.io "Tuhin") and can deploy using Cloudflare Pages.
+## This website ([This Website](https://thetuhin.com "This Website")) is also using Cloudflare Pages. To Test you can fork [this](https://github.com/tuhinpal/cachecleanerjeet.github.io "Tuhin") and can deploy using Cloudflare Pages.

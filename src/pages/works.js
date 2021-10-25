@@ -49,7 +49,7 @@ export default function Works({ data }) {
           <p>
             Some of my works which I love are listed here, other Open Sourced
             projects can be found on my <br />
-            <a className="gh" href="https://github.com/cachecleanerjeet">
+            <a className="gh" href="https://github.com/tuhinpal">
               Github
             </a>
           </p>
@@ -135,4 +135,4 @@ export default function Works({ data }) {
       </div>
     </main>
   );
-};
+}

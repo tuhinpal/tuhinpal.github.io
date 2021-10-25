@@ -12,48 +12,48 @@ imgurl: "https://telegra.ph/file/b5b9e57be66e2a3ade262.png"
 
 Cloudflare workers are based on Google's [V8 Engine](https://v8.dev/ "V8 Engine"). These are same like native vanilla javascript. (except <code>eval</code>, <code>new Function</code>, <code>Date.now()</code>). For something request on internet there are fetch API same as browser fetch. For database and storage there are Cloudflare worker KV.
 
-### So, let's code an API which is using Cloudflare's KV, it will store data and serve the stored data. [Source Code available here](https://github.com/cachecleanerjeet/CloudflareDB "Source Code").
+### So, let's code an API which is using Cloudflare's KV, it will store data and serve the stored data. [Source Code available here](https://github.com/tuhinpal/CloudflareDB "Source Code").
 
 #### Firstly let's Handel an incoming request:
 
 ```javascript
-addEventListener('fetch', event => {
-    event.respondWith(handleRequest(event.request))
-})
+addEventListener("fetch", (event) => {
+  event.respondWith(handleRequest(event.request));
+});
 ```
 
 As you can see here we give a reference of a function named handleRequest and passed the request.
 
-#### handleRequest function will be an async function. 
+#### handleRequest function will be an async function.
 
 ```javascript
 async function handleRequest(request) {
-// Will be coded here
+  // Will be coded here
 }
 ```
 
-We are using POST for save a data. If browser send a POST request, it sends a preflight request (OPTIONS). We have to handle the request. He we create a if, else if, if function. If request method (request.method) is "OPTIONS" then will send a 200 status code along with some headers. We need to send the headers all time that's why we declare the headers, for each response the header will be sent. 
+We are using POST for save a data. If browser send a POST request, it sends a preflight request (OPTIONS). We have to handle the request. He we create a if, else if, if function. If request method (request.method) is "OPTIONS" then will send a 200 status code along with some headers. We need to send the headers all time that's why we declare the headers, for each response the header will be sent.
 
 ```javascript
 const headers = {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "*",
-        "Access-Control-Allow-Methods": "GET,POST,DELETE,OPTIONS",
-        "Access-Control-Max-Age": "86400",
-        "Content-Type": "application/json",
-        "Cache-Control": "no-cache, no-store, must-revalidate"
-    }
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers": "*",
+  "Access-Control-Allow-Methods": "GET,POST,DELETE,OPTIONS",
+  "Access-Control-Max-Age": "86400",
+  "Content-Type": "application/json",
+  "Cache-Control": "no-cache, no-store, must-revalidate",
+};
 ```
 
 #### Okay! now Let's handle that "OPTION" Request
 
 ```javascript
 if (request.method == "OPTIONS") {
-        return new Response(null, {
-            status: 200,
-            headers
-        })
-    }
+  return new Response(null, {
+    status: 200,
+    headers,
+  });
+}
 ```
 
 Now, have to create a KV storage and bind the variable. Let's give "TUHIN" to variable name.
@@ -62,11 +62,11 @@ Now, have to create a KV storage and bind the variable. Let's give "TUHIN" to va
 
 ```javascript
 else if (request.method == "POST") {
-        // Handle POST 
+        // Handle POST
     }
 ```
 
-Here we have to receive the Payload DATA, Set an Unique ID and save the data into KV. If data received with "_id" object we will set the Unique ID insted of generate one. To generate an ID we fetch the GMT and add some random string with it.
+Here we have to receive the Payload DATA, Set an Unique ID and save the data into KV. If data received with "\_id" object we will set the Unique ID insted of generate one. To generate an ID we fetch the GMT and add some random string with it.
 
 ```javascript
 else if (request.method == "POST") {
@@ -86,16 +86,17 @@ else if (request.method == "POST") {
          status: 200,
          headers
      })
-} 
+}
 ```
 
 ### Let's handle the "GET" request
 
 ```javascript
 else if (request.method == "GET") {
-        // Handle GET 
+        // Handle GET
     }
 ```
+
 Here we have to receive the path of the url, we will get the Unique ID from URL. After that we will GET the Data of that Unique ID (Key).
 
 ```javascript
@@ -139,6 +140,6 @@ else if (request.method == "DELETE") {
 }
 ```
 
-### I implimented some extra features and the Final Output looks like [this](https://github.com/cachecleanerjeet/CloudflareDB "this").
+### I implimented some extra features and the Final Output looks like [this](https://github.com/tuhinpal/CloudflareDB "this").
 
-##  Hope you loved it 💗
+## Hope you loved it 💗
