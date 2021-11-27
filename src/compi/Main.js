@@ -2,42 +2,44 @@ import * as React from "react";
 import { useState } from "react";
 import "../style/style.scss";
 import { Link } from "gatsby";
-import { TimelineMax, Power2, gsap } from 'gsap';
-import { CSSRulePlugin } from "gsap/CSSRulePlugin";
-import { useEffect } from "react";
-gsap.registerPlugin(CSSRulePlugin);
+// import { TimelineMax, Power2, gsap } from 'gsap';
+// import { CSSRulePlugin } from "gsap/CSSRulePlugin";
+// import { useEffect } from "react";
+// gsap.registerPlugin(CSSRulePlugin);
 
 export default function Index() {
   const [mmenu, setMmenu] = useState("");
 
-  useEffect(() => {
-    const eyeblink = new TimelineMax()
-    eyeblink.to(CSSRulePlugin.getRule('body:before'), 0.2, {
-      cssRule: {
-        top: '50%'
-      },
-      ease: Power2.easeOut
-    }, '0', 'close')
-      .to(CSSRulePlugin.getRule('body:after'), 0.2, {
-        cssRule: {
-          bottom: '50%'
-        },
-        ease: Power2.easeOut
-      }, '0', 'close')
-      .to(CSSRulePlugin.getRule('body:before'), 0.2, {
-        cssRule: {
-          top: '0%'
-        },
-        ease: Power2.easeOut
-      }, '+=1', 'open')
-      .to(CSSRulePlugin.getRule('body:after'), 0.2, {
-        cssRule: {
-          bottom: '0%'
-        },
-        ease: Power2.easeOut
-      }, '-=0.2', 'open')
+  // useEffect(() => {
+  //   const eyeblink = new TimelineMax()
+  //   eyeblink.to(CSSRulePlugin.getRule('body:before'), 0.2, {
+  //     cssRule: {
+  //       top: '50%'
+  //     },
+  //     ease: Power2.easeOut
+  //   }, '0', 'close')
+  //     .to(CSSRulePlugin.getRule('body:after'), 0.2, {
+  //       cssRule: {
+  //         bottom: '50%'
+  //       },
+  //       ease: Power2.easeOut
+  //     }, '0', 'close')
+  //     .to(CSSRulePlugin.getRule('body:before'), 0.2, {
+  //       cssRule: {
+  //         top: '0%'
+  //       },
+  //       ease: Power2.easeOut
+  //     }, '+=1', 'open')
+  //     .to(CSSRulePlugin.getRule('body:after'), 0.2, {
+  //       cssRule: {
+  //         bottom: '0%'
+  //       },
+  //       ease: Power2.easeOut
+  //     }, '-=0.2', 'open')
 
-  }, [])
+  // }, [])
+
+  // crap animation
 
   const mmenuF = () => {
     if (mmenu === "") {
@@ -108,4 +110,4 @@ export default function Index() {
       </div>
     </div>
   );
-};
+}
