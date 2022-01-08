@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
-import Main from "../compi/Main";
+import Main from "../components/Main";
 import { API_URL, RECAPTCHA_API_TOKEN } from "../config";
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -38,7 +38,7 @@ export default function Contact() {
           <select
             name="reason"
             value={contact_reason}
-            onBlur={() => { }}
+            onBlur={() => {}}
             onChange={(event) => {
               setContact_reason(event.target.value);
             }}
@@ -106,7 +106,7 @@ export default function Contact() {
                       message: contact_msg,
                       reason: contact_reason,
                       recaptcha_token: RcTok,
-                      totalmessage: localStorage.getItem('messageCount'),
+                      totalmessage: localStorage.getItem("messageCount"),
                     }),
                   })
                     .then((response) => response.json())
@@ -148,4 +148,4 @@ export default function Contact() {
       <ReCAPTCHA ref={RecapH} size="invisible" sitekey={RECAPTCHA_API_TOKEN} />
     </main>
   );
-};
+}

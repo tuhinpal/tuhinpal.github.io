@@ -1,5 +1,5 @@
 import * as React from "react";
-import Main from "../compi/Main";
+import Main from "../components/Main";
 import JavascriptImage from "../images/icons/javascript.svg";
 import NodeImage from "../images/icons/node-brands.svg";
 import MongoImage from "../images/icons/mongodb.svg";
@@ -11,7 +11,7 @@ import FirebaseImage from "../images/icons/firebase.svg";
 import NextImage from "../images/icons/next-dot-js.svg";
 import PythonImage from "../images/icons/python.svg";
 import GatsbyImage from "../images/icons/gatsby.svg";
-import DenoImage from "../images/icons/deno.svg"
+import DenoImage from "../images/icons/deno.svg";
 
 export default function Skillsets() {
   return (
@@ -125,4 +125,4 @@ export default function Skillsets() {
       </div>
     </main>
   );
-};
+}

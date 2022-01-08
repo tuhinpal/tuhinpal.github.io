@@ -1,6 +1,6 @@
 import { graphql, Link } from "gatsby";
 import React from "react";
-import Main from "../compi/Main";
+import Main from "../components/Main";
 
 export const query = graphql`
   query graphAllBlogs {
@@ -53,4 +53,4 @@ export default function Blog({ data }) {
       </div>
     </main>
   );
-};
+}
