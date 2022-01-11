@@ -40,3 +40,64 @@ Possiblities are given below 👇
 | creator  | Creator of channel (In channel)  |
 | administrator  | Admin of channel (In channel)  |
 | member  | Member of channel (In channel)  |
+
+
+
+## This Node Snippet can help you 
+
+```javascript
+const axios = require("axios");
+const telegramApiKey = process.env.TELEGRAM_BOT_TOKEN || "";
+
+async function main() {
+  var channelId = "-1001262388958";
+  var userId = "981558170";
+
+  var inChannel = await checkMember({ channelId, userId });
+  console.log(inChannel);
+}
+
+async function checkMember({ channelId, userId }) {
+  var inChannel = {
+    in_channel: null,
+    type: null,
+  };
+
+  try {
+    var reqUrl = `https://api.telegram.org/bot${telegramApiKey}/getChatMember?chat_id=${channelId}&user_id=${userId}`;
+    var response = (await axios.get(reqUrl)).data;
+
+    inChannel.type = response.result.status;
+
+    if (response.ok) {
+      switch (response.result.status) {
+        case "left":
+          inChannel.in_channel = false;
+          break;
+
+        case "kicked":
+          inChannel.in_channel = false;
+          break;
+
+        case "restricted":
+          inChannel.in_channel = false;
+          break;
+
+        default:
+          inChannel.in_channel = true;
+          break;
+      }
+    } else {
+      inChannel.in_channel = false;
+      inChannel.type = "notjoined";
+    }
+  } catch (error) {
+    inChannel.in_channel = false;
+    inChannel.type = "error";
+  }
+
+  return inChannel;
+}
+
+main();
+```
