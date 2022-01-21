@@ -1,5 +1,34 @@
 [
     {
+        "project_name": "Visadb 2.0",
+        "project_language_image": "https://cdn.jsdelivr.net/npm/simple-icons@3.2.0/icons/next-dot-js.svg",
+        "project_language": "Javascript",
+        "project_image": "https://visadb.io/images/brand/icon.svg",
+        "project_description": "Visadb.io makes immigration & cross-border business simple for global companies and citizens. We offer online access to verified Experts for immigration, tax and company formation in 100+ countries.",
+        "project_action": {
+            "website": {
+                "available": true,
+                "content": "https://visadb.io/"
+            },
+            "case_study": {
+                "available": true,
+                "content": "/blog/visadb-v2"
+            },
+            "github": {
+                "available": false,
+                "content": ""
+            },
+            "demo": {
+                "available": false,
+                "content": ""
+            },
+            "youtube": {
+                "available": false,
+                "content": ""
+            }
+        }
+    },
+    {
         "project_name": "Printit",
         "project_language_image": "https://cdn.jsdelivr.net/npm/simple-icons@3.2.0/icons/next-dot-js.svg",
         "project_language": "Javascript",
@@ -29,27 +58,27 @@
         }
     },
     {
-        "project_name": "VideoHire",
-        "project_language_image": "https://cdn.jsdelivr.net/npm/simple-icons@3.2.0/icons/next-dot-js.svg",
+        "project_name": "Things to DO",
+        "project_language_image": "https://cdn.jsdelivr.net/npm/simple-icons@3.2.0/icons/cloudflare.svg",
         "project_language": "Javascript",
-        "project_image": "https://app.videohire.link/logo/icon.png",
-        "project_description": "Hire remote employees faster, cheaper and fairer with video interviews. Adding one-way video interviews at the beginning of the hiring process saves time, cost and find you most engaged and culturally fit candidates remotely.",
+        "project_image": "https://firebasestorage.googleapis.com/v0/b/cdn-tuhin.appspot.com/o/1642773130h1dk?alt=media&token=68635aa0-b108-4940-9758-1c4f144e1946",
+        "project_description": "Get things to do on a place. Powered by Google's Things to do and Cloudflare worker. This project doesn't use Google's Official API.",
         "project_action": {
             "website": {
-                "available": true,
-                "content": "https://videohire.link/"
+                "available": false,
+                "content": ""
             },
             "case_study": {
                 "available": false,
                 "content": ""
             },
             "github": {
-                "available": false,
-                "content": ""
+                "available": true,
+                "content": "https://github.com/tuhinpal/thingstodo"
             },
             "demo": {
-                "available": false,
-                "content": ""
+                "available": true,
+                "content": "https://thingstodo.tprojects.workers.dev/place/0cvw9"
             },
             "youtube": {
                 "available": false,
