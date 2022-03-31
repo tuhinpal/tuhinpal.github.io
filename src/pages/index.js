@@ -1,13 +1,13 @@
 import * as React from "react";
-import Main from "../components/Main";
+import Layout from "../components/Layout";
 import me from "../images/me.jpg";
 import { Link } from "gatsby";
 
 export default function Index() {
   return (
-    <main>
+    <>
       <title>Tuhin</title>
-      {Main()}
+      <Layout />
       <div className="container">
         <div>
           <h1>
@@ -73,6 +73,6 @@ export default function Index() {
           <img className="img" src={me} alt="Tuhin" />
         </div>
       </div>
-    </main>
+    </>
   );
 }

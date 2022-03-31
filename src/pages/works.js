@@ -1,5 +1,5 @@
 import * as React from "react";
-import Main from "../components/Main";
+import Layout from "../components/Layout";
 import { graphql, Link } from "gatsby";
 
 export const query = graphql`
@@ -40,9 +40,9 @@ export const query = graphql`
 
 export default function Works({ data }) {
   return (
-    <main>
+    <>
       <title>Works | Tuhin</title>
-      {Main()}
+      <Layout />
       <div>
         <div className="projects_header">
           <h1>My Works</h1>
@@ -133,6 +133,6 @@ export default function Works({ data }) {
           </div>
         ))}
       </div>
-    </main>
+    </>
   );
 }

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
-import Main from "../components/Main";
+import Layout from "../components/Layout";
 import { API_URL, RECAPTCHA_API_TOKEN } from "../config";
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -17,9 +17,9 @@ export default function Contact() {
   const RecapH = React.createRef();
 
   return (
-    <main>
+    <>
       <title>Contact | Tuhin</title>
-      {Main()}
+      <Layout />
       <div className="contact">
         <div className="_form_">
           <h1>Hello!</h1>
@@ -146,6 +146,6 @@ export default function Contact() {
       </div>
 
       <ReCAPTCHA ref={RecapH} size="invisible" sitekey={RECAPTCHA_API_TOKEN} />
-    </main>
+    </>
   );
 }

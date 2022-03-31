@@ -1,6 +1,6 @@
 import { graphql, Link } from "gatsby";
 import React from "react";
-import Main from "../components/Main";
+import Layout from "../components/Layout";
 
 export const query = graphql`
   query graphAllBlogs {
@@ -24,9 +24,9 @@ export const query = graphql`
 
 export default function Blog({ data }) {
   return (
-    <main>
+    <>
       <title>Blog | Tuhin</title>
-      {Main()}
+      <Layout />
       <div className="blog_header">
         <h1>Blog</h1>
         <p>I am not a good blogger, but I love to share my experiences.</p>
@@ -51,6 +51,6 @@ export default function Blog({ data }) {
           </div>
         ))}
       </div>
-    </main>
+    </>
   );
 }

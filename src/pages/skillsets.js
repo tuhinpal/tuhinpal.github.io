@@ -1,23 +1,20 @@
 import * as React from "react";
-import Main from "../components/Main";
+import Layout from "../components/Layout";
 import JavascriptImage from "../images/icons/javascript.svg";
 import NodeImage from "../images/icons/node-brands.svg";
 import MongoImage from "../images/icons/mongodb.svg";
 import ReactImage from "../images/icons/react.svg";
-import HtmlImage from "../images/icons/html5.svg";
-import SassImage from "../images/icons/sass.svg";
 import DockerImage from "../images/icons/docker.svg";
 import FirebaseImage from "../images/icons/firebase.svg";
 import NextImage from "../images/icons/next-dot-js.svg";
 import PythonImage from "../images/icons/python.svg";
 import GatsbyImage from "../images/icons/gatsby.svg";
-import DenoImage from "../images/icons/deno.svg";
 
 export default function Skillsets() {
   return (
-    <main>
+    <>
       <title>Skillsets | Tuhin</title>
-      {Main()}
+      <Layout />
       <div>
         <div className="projects_header">
           <h1>Skillsets</h1>
@@ -25,104 +22,87 @@ export default function Skillsets() {
         </div>
 
         <div className="skillsets">
-          <a
-            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-            target="_blank"
-            rel="noreferrer"
-            className="card"
-          >
-            <img src={JavascriptImage} alt="Javascript" />
-          </a>
-          <a
-            href="https://nodejs.org/"
-            target="_blank"
-            rel="noreferrer"
-            className="card"
-          >
-            <img src={NodeImage} alt="NodeJS" />
-          </a>
-          <a
-            href="https://www.mongodb.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="card"
-          >
-            <img src={MongoImage} alt="MongoDB" />
-          </a>
-          <a
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noreferrer"
-            className="card"
-          >
-            <img src={ReactImage} alt="React" />
-          </a>
-          <a
-            href="https://html5.org/"
-            target="_blank"
-            rel="noreferrer"
-            className="card"
-          >
-            <img src={HtmlImage} alt="Html5" />
-          </a>
-          <a
-            href="https://sass-lang.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="card"
-          >
-            <img src={SassImage} alt="Sass" />
-          </a>
-          <a
-            href="https://docker.io/"
-            target="_blank"
-            rel="noreferrer"
-            className="card"
-          >
-            <img src={DockerImage} alt="Docker" />
-          </a>
-          <a
-            href="https://firebase.google.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="card"
-          >
-            <img src={FirebaseImage} alt="Firebase" />
-          </a>
-          <a
-            href="https://nextjs.org/"
-            target="_blank"
-            rel="noreferrer"
-            className="card"
-          >
-            <img src={NextImage} alt="NextJS" />
-          </a>
-          <a
-            href="https://python.org/"
-            target="_blank"
-            rel="noreferrer"
-            className="card"
-          >
-            <img src={PythonImage} alt="Python" />
-          </a>
-          <a
-            href="https://www.gatsbyjs.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="card"
-          >
-            <img src={GatsbyImage} alt="Gatsby" />
-          </a>
-          <a
-            href="https://deno.land/"
-            target="_blank"
-            rel="noreferrer"
-            className="card"
-          >
-            <img src={DenoImage} alt="Deno" />
-          </a>
+          {skillsetsData.map((skill) => (
+            <a
+              key={skill.name}
+              href={skill.link}
+              target="_blank"
+              rel="noreferrer"
+              className="card"
+            >
+              <img
+                src={skill.icon}
+                className="blacknwhite"
+                alt={skill.name}
+                title={skill.name}
+              />
+            </a>
+          ))}
         </div>
       </div>
-    </main>
+    </>
   );
 }
+
+const skillsetsData = [
+  {
+    name: "Javascript",
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    icon: JavascriptImage,
+  },
+  {
+    name: "Typescript",
+    link: "https://www.typescriptlang.org/",
+    icon: "https://cdn.jsdelivr.net/npm/simple-icons@3.2.0/icons/typescript.svg",
+  },
+  {
+    name: "NodeJS",
+    link: "https://nodejs.org",
+    icon: NodeImage,
+  },
+  {
+    name: "MongoDB",
+    link: "https://www.mongodb.com/",
+    icon: MongoImage,
+  },
+  {
+    name: "React",
+    link: "https://reactjs.org/",
+    icon: ReactImage,
+  },
+  {
+    name: "NextJS",
+    link: "https://nextjs.org/",
+    icon: NextImage,
+  },
+  {
+    name: "MySQL",
+    link: "https://www.mysql.com/",
+    icon: "https://cdn.jsdelivr.net/npm/simple-icons@3.2.0/icons/mysql.svg",
+  },
+  {
+    name: "Docker",
+    link: "https://docker.io/",
+    icon: DockerImage,
+  },
+  {
+    name: "Firebase",
+    link: "https://firebase.google.com/",
+    icon: FirebaseImage,
+  },
+  {
+    name: "Cloudflare Worker",
+    link: "https://workers.cloudflare.com/",
+    icon: "https://workers.cloudflare.com/resources/logo/logo.svg",
+  },
+  {
+    name: "Python",
+    link: "https://python.org/",
+    icon: PythonImage,
+  },
+  {
+    name: "GatsbyJS",
+    link: "https://www.gatsbyjs.com/",
+    icon: GatsbyImage,
+  },
+];

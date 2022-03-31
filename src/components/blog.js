@@ -1,7 +1,7 @@
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import React from "react";
-import Main from "./Main";
+import Layout from "./Layout";
 
 export const query = graphql`
   query graphBlog($id: String!) {
@@ -22,7 +22,7 @@ export default function blog({ data }) {
   return (
     <main>
       <title>{frontmatter.title} | Blog | Tuhin</title>
-      {Main()}
+      <Layout />
       <div className="blog_single">
         <h1>{frontmatter.title}</h1>
         <h2>
@@ -46,4 +46,4 @@ export default function blog({ data }) {
       </div>
     </main>
   );
-};
+}
