@@ -54,11 +54,8 @@ export default function Works({ data }) {
             </a>
           </p>
         </div>
-        {data.allDataJson.nodes.map((data, no) => (
-          <div className="project" key={no}>
-            <div className="image">
-              <img src={data.project_image} alt={data.project_name} />
-            </div>
+        {data.allDataJson.nodes.map((data) => (
+          <div className="project" key={data.project_name}>
             <div className="content">
               <h1>
                 {data.project_name}{" "}
@@ -130,6 +127,12 @@ export default function Works({ data }) {
                 )}
               </div>
             </div>
+
+            {data.project_image && (
+              <div className="image">
+                <img src={data.project_image} alt={data.project_name} />
+              </div>
+            )}
           </div>
         ))}
       </div>
