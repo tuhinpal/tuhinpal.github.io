@@ -142,6 +142,12 @@ export default function Contact() {
               </span>
             </button>
           )}
+
+          <p style={
+            {
+              marginTop: -30
+            }
+          }>Alternatively, mail me at <a href="mailto:me@thetuhin.com">me[at]thetuhin.com</a></p>
         </div>
       </div>
 
