@@ -9,7 +9,7 @@
     margin-right: 5rem;
     padding: 0;
     h1 {
-        font-size: 1em;
+        font-size: 1.2em;
         color: rgb(0, 0, 0);
         margin: 4em 0 0 0;
         font-family: 'Courier New', Courier, monospace;
@@ -51,13 +51,13 @@
     }
     p {
         font-size: 1.4rem;
-        color: rgba(0, 0, 0, 0.292);
+        color: rgba(0, 0, 0, 0.45);
         font-family: Poppins;
         max-width: 70%;
         margin-top: 2rem;
         margin-bottom: 3rem;
         a {
-            color: rgba(0, 0, 0, 0.292);
+            color: rgba(0, 0, 0, 0.45);
             text-decoration: none;
             &:hover {
                 color: rgba(0, 0, 0, 0.796);
@@ -71,7 +71,6 @@
             border-radius: .5rem;
             height: 100%;
             margin-left: auto;
-            opacity: 0.6;
         }
     }
     .social {
