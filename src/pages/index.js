@@ -8,25 +8,28 @@ export default function Index() {
   const imgRef = React.useRef(null);
   const [imageIsDotted, setimageIsDotted] = React.useState(true);
 
-  React.useEffect(() => {
-    function imageHoverChecker() {
-      if (!imgRef.current) return;
+  React.useLayoutEffect(() => {
+    const img = imgRef.current;
 
-      imgRef.current.addEventListener("mouseenter", () => {
-        setimageIsDotted(false);
-      });
-
-      imgRef.current.addEventListener("mouseleave", () => {
-        setimageIsDotted(true);
-      });
+    function onHover() {
+      setimageIsDotted(false);
     }
 
-    imageHoverChecker();
+    function onLeave() {
+      setimageIsDotted(true);
+    }
+
+    if (img) {
+      img.addEventListener("mouseenter", onHover);
+      img.addEventListener("mouseleave", onLeave);
+    }
 
     return () => {
       setimageIsDotted(true);
-      document.removeEventListener("mouseenter", imageHoverChecker);
-      document.removeEventListener("mouseleave", imageHoverChecker);
+      if (img) {
+        img.removeEventListener("mouseenter", onHover);
+        img.removeEventListener("mouseleave", onLeave);
+      }
     };
   }, []);
 
