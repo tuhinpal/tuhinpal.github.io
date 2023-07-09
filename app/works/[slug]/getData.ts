@@ -1,5 +1,5 @@
 import path from "path";
-import { readFileSync } from "fs";
+import { existsSync, readFileSync } from "fs";
 import matter, { GrayMatterFile } from "gray-matter";
 
 export interface WorkContent extends GrayMatterFile<string> {
@@ -21,8 +21,10 @@ export interface WorkContentData {
 
 export async function getData(slug = "") {
   const workPath = path.join(process.cwd(), "data", "works", `${slug}.md`);
-  const workContent = readFileSync(workPath, "utf8");
+  const isExists = existsSync(workPath);
+  if (!isExists) throw new Error(`Work ${slug} not found`);
 
+  const workContent = readFileSync(workPath, "utf8");
   const data = matter(workContent) as WorkContent;
   return data;
 }

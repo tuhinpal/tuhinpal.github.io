@@ -11,12 +11,18 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }): Promise<Metadata> {
-  const { data } = await getData(params.slug);
+  try {
+    const { data } = await getData(params.slug);
 
-  return {
-    title: `${data.name} - tuhin's work`,
-    description: data.description,
-  };
+    return {
+      title: `${data.name} - tuhin's work`,
+      description: data.description,
+    };
+  } catch (error) {
+    return {
+      title: (error as Error).message,
+    };
+  }
 }
 
 export default async function Work({
