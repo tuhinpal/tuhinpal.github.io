@@ -12,7 +12,7 @@ export default function Works() {
     <div className="flex flex-col items-center gap-y-16 justify-center my-16 md:my-24">
       {works.map((work) => (
         <div
-          className="flex flex-col items-center justify-center rounded-[52px] overflow-hidden relative py-10 group hover:shadow-xl transition-all duration-100 ease-in-out"
+          className="flex flex-col items-center justify-center rounded-2xl md:rounded-[52px] overflow-hidden relative py-10 group hover:shadow-xl transition-all duration-100 ease-in-out"
           key={work.name}
           style={{
             backgroundColor: work.bgColor,
@@ -24,7 +24,7 @@ export default function Works() {
           </div>
 
           {work.isLatest && (
-            <div className="absolute top-14 left-14 z-10">
+            <div className="absolute md:top-14 md:left-14 top-4 left-4 z-10">
               <Button className="bg-gray-800 rounded-full px-4 py-2 text-white hover:bg-gray-800">
                 Latest
               </Button>
@@ -34,7 +34,7 @@ export default function Works() {
           <div
             className={classNames(
               `
-                flex flex-col items-start justify-end w-full h-full px-14 py-16 text-start absolute bottom-0
+                flex flex-col items-start justify-end w-full h-full md:px-14 md:py-16 px-4 py-6 text-start absolute bottom-0
                 md:bg-gradient-to-tr md:via-transparent md:to-transparent
                 md:group-hover:backdrop-blur-sm md:group-hover:bg-gradient-to-tr
                 backdrop-blur-sm bg-gradient-to-tr 

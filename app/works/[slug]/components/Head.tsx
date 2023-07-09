@@ -16,7 +16,7 @@ export default function WorkHead({ data }: { data: WorkContentData }) {
         {data.description}
       </p>
 
-      <div className="flex items-center justify-between p-5 bg-zinc-100 mt-8 rounded-3xl">
+      <div className="flex flex-wrap gap-4 items-center justify-between p-5 bg-zinc-100 mt-8 rounded-3xl">
         <div className="flex items-center gap-4">
           <Image
             src={data.logo}

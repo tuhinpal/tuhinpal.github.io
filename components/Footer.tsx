@@ -13,7 +13,7 @@ export default function Footer() {
   const isAboutPage = useMemo(() => pathname === "/about", [pathname]);
 
   return (
-    <header className="flex flex-row justify-between items-center w-full py-5 px-10 mt-7 mb-14 bg-neutral-100 rounded-[33px]">
+    <header className="flex flex-wrap justify-center gap-2 sm:justify-between items-center w-full py-5 px-10 mt-7 mb-14 bg-neutral-100 rounded-[33px]">
       <div className="flex items-center gap-1">
         <Anchor
           href="/"
@@ -22,7 +22,7 @@ export default function Footer() {
           <Logo width={120} height={30} className="text-stone-600" />
         </Anchor>
 
-        <p className="ml-3 text-sm text-stone-600">
+        <p className="ml-3 text-sm text-stone-600 hidden md:block">
           © {new Date().getFullYear()}
         </p>
       </div>
