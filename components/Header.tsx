@@ -13,7 +13,7 @@ export default function Header() {
   const isAboutPage = useMemo(() => pathname === "/about", [pathname]);
 
   return (
-    <header className="flex flex-row justify-between items-center w-full py-8">
+    <header className="flex flex-row justify-between items-center w-full py-5 md:py-8">
       <div className="items-center gap-3 hidden md:flex w-1/3">
         {isAboutPage ? (
           <Anchor className="text-lg" href={"/"}>

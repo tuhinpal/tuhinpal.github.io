@@ -6,7 +6,7 @@ import { getData } from "./getData";
 import { WorkContent } from "./components/Content";
 import FooterNav from "@/components/FooterNav";
 
-export const revalidate = 60 * 60 * 24 * 365;
+export const revalidate = false;
 
 export async function generateMetadata({
   params,
