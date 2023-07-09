@@ -16,7 +16,9 @@ export const metadata: Metadata = {
     description,
     images: [
       {
-        url: `/api/og?title=${encodeURIComponent(title)}`,
+        url: `/api/og?title=${encodeURIComponent(
+          "Tuhin Kanti Pal is a full-stack engineer from India"
+        )}`,
         width: 1200,
         height: 630,
         alt: title,

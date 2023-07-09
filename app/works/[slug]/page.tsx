@@ -29,7 +29,9 @@ export async function generateMetadata({
         authors: ["Tuhin Kanti Pal", "Danish Soomro"],
         images: [
           {
-            url: `/api/og?title=${encodeURIComponent(title)}`,
+            url: `/api/og?title=${encodeURIComponent(
+              `${data.name} - ${data.slogan}`
+            )}`,
             width: 1200,
             height: 630,
             alt: title,
