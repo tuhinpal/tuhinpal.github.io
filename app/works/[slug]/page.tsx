@@ -16,9 +16,26 @@ export async function generateMetadata({
   try {
     const { data } = await getData(params.slug);
 
+    const title = `${data.name} - tuhin's work`;
+    const description = data.description;
+
     return {
-      title: `${data.name} - tuhin's work`,
-      description: data.description,
+      title,
+      description,
+      openGraph: {
+        type: "article",
+        title,
+        description,
+        authors: ["Tuhin Kanti Pal", "Danish Soomro"],
+        images: [
+          {
+            url: `/api/og?title=${encodeURIComponent(title)}`,
+            width: 1200,
+            height: 630,
+            alt: title,
+          },
+        ],
+      },
     };
   } catch (error) {
     return {

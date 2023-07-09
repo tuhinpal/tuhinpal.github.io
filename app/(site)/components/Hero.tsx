@@ -23,7 +23,7 @@ export default function Hero() {
         }}
       >
         <span> Hi, I&apos;m Tuhin -</span>
-        <span>I build great products.</span>
+        <span>I build web products.</span>
       </h1>
 
       <Anchor href="/about" className="flex md:hidden">

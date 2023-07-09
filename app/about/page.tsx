@@ -3,10 +3,26 @@ import type { Metadata } from "next";
 import AboutDetails from "./components/Details";
 import AboutHeading from "./components/Heading";
 
+const title = "about - tuhin";
+const description =
+  "I am a full-stack engineer from India with a focus on web technology.";
+
 export const metadata: Metadata = {
-  title: "about - tuhin",
-  description:
-    "I am a full-stack engineer from India with a focus on web technology.",
+  title,
+  description,
+  openGraph: {
+    type: "website",
+    title,
+    description,
+    images: [
+      {
+        url: `/api/og?title=${encodeURIComponent(title)}`,
+        width: 1200,
+        height: 630,
+        alt: title,
+      },
+    ],
+  },
 };
 
 export default function About() {
