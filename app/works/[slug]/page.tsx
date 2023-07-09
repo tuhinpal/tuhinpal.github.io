@@ -1,8 +1,23 @@
+import { Metadata } from "next";
+
 import Separator from "@/components/Separator";
 import WorkHead from "./components/Head";
 import { getData } from "./getData";
 import { WorkContent } from "./components/Content";
 import FooterNav from "@/components/FooterNav";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const { data } = await getData(params.slug);
+
+  return {
+    title: `${data.name} - tuhin's work`,
+    description: data.description,
+  };
+}
 
 export default async function Work({
   params: { slug },

@@ -8,8 +8,9 @@ import Footer from "@/components/Footer";
 const font = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "tuhin - I create software experiences",
-  description: "I create software experiences",
+  title: "tuhin - I build great products",
+  description:
+    "I am a full-stack engineer from India with a focus on web technology.",
 };
 
 export default function RootLayout({

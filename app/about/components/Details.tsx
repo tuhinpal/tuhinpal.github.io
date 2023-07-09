@@ -1,3 +1,5 @@
+"use client";
+
 import Button from "@/components/Button";
 
 export default function AboutDetails() {
@@ -44,7 +46,7 @@ export default function AboutDetails() {
             window.open("mailto:me@thetuhin.com");
           }}
         >
-          Say hello
+          Email me
         </Button>
 
         <Button className="bg-gray-100 hover:rounded-full">Download CV</Button>
