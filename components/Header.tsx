@@ -3,12 +3,27 @@
 import Button from "@/components/Button";
 import Logo from "./Logo";
 import SocialMedia from "./SocialMedia";
+import { usePathname } from "next/navigation";
+import { useMemo } from "react";
+import Anchor from "./Anchor";
 
 export default function Header() {
+  const pathname = usePathname();
+
+  const isAboutPage = useMemo(() => pathname === "/about", [pathname]);
+
   return (
     <header className="flex flex-row justify-between items-center w-full py-8">
       <div className="items-center gap-3 hidden md:flex">
-        <Button className="text-lg">About</Button>
+        {isAboutPage ? (
+          <Anchor className="text-lg" href={"/"}>
+            Back to main
+          </Anchor>
+        ) : (
+          <Anchor className="text-lg" href={"/about"}>
+            About
+          </Anchor>
+        )}
       </div>
 
       <div>
