@@ -9,7 +9,7 @@ import { works, ButtonTypes } from "@/data/works";
 
 export default function Works() {
   return (
-    <div className="flex flex-col items-center justify-center my-16 md:my-24">
+    <div className="flex flex-col items-center gap-y-16 justify-center my-16 md:my-24">
       {works.map((work) => (
         <div
           className="flex flex-col items-center justify-center rounded-[52px] overflow-hidden relative py-10 group hover:shadow-xl transition-all duration-100 ease-in-out"
@@ -19,14 +19,8 @@ export default function Works() {
             height: "75vh",
           }}
         >
-          <div className="px-[10%] transform translate-y-20 transition-all duration-200 group-hover:translate-y-10 ease-in-out">
-            <Image
-              src={work.image}
-              alt={work.name}
-              width={1000}
-              height={500}
-              className=""
-            />
+          <div className="px-[10%] transform translate-y-14 transition-all duration-200 group-hover:translate-y-10 ease-in-out">
+            <Image src={work.image} alt={work.name} width={1000} height={500} />
           </div>
 
           {work.isLatest && (
@@ -38,13 +32,33 @@ export default function Works() {
           )}
 
           <div
-            className="
-                      flex flex-col items-start justify-end w-full h-full px-14 py-16 text-start absolute bottom-0
-                      md:bg-gradient-to-tr md:from-pink-100 md:via-transparent md:to-transparent
-                      md:group-hover:backdrop-blur-sm md:group-hover:bg-gradient-to-tr md:group-hover:from-pink-200
-                      backdrop-blur-sm bg-gradient-to-tr from-pink-200
-                      md:backdrop-blur-none
-                      "
+            className={classNames(
+              `
+                flex flex-col items-start justify-end w-full h-full px-14 py-16 text-start absolute bottom-0
+                md:bg-gradient-to-tr md:via-transparent md:to-transparent
+                md:group-hover:backdrop-blur-sm md:group-hover:bg-gradient-to-tr
+                backdrop-blur-sm bg-gradient-to-tr 
+                md:backdrop-blur-none`,
+              {
+                "md:from-pink-100 md:group-hover:from-pink-200 from-pink-200":
+                  work.accentColorTW === "pink",
+
+                "md:from-blue-100 md:group-hover:from-blue-200 from-blue-200":
+                  work.accentColorTW === "blue",
+
+                "md:from-green-100 md:group-hover:from-green-200 from-green-200":
+                  work.accentColorTW === "green",
+
+                "md:from-yellow-100 md:group-hover:from-yellow-200 from-yellow-200":
+                  work.accentColorTW === "yellow",
+
+                "md:from-purple-100 md:group-hover:from-purple-200 from-purple-200":
+                  work.accentColorTW === "purple",
+
+                "md:from-red-100 md:group-hover:from-red-200 from-red-200":
+                  work.accentColorTW === "red",
+              }
+            )}
           >
             <h2 className="text-4xl font-bold leading-tight">{work.name}</h2>
 
