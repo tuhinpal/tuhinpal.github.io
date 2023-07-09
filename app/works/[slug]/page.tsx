@@ -6,7 +6,7 @@ import { getData } from "./getData";
 import { WorkContent } from "./components/Content";
 import FooterNav from "@/components/FooterNav";
 
-export const revalidate = false;
+export const dynamic = "force-static";
 
 export async function generateMetadata({
   params,
