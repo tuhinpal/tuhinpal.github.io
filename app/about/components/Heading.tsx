@@ -16,8 +16,8 @@ export default function AboutHeading() {
       </div>
 
       <h1 className="font-semibold text-4xl w-full md:w-7/12 pl-0 md:pl-12 leading-[45px] text-center md:text-left">
-        Hello, I'm Tuhin Kanti Pal. I create products for the web. Currently
-        working as{" "}
+        Hello, I&apos;m Tuhin Kanti Pal. I create products for the web.
+        Currently working as{" "}
         <span className="text-red-500 font-bold">Technical Lead</span> at{" "}
         <a
           href="https://visadb.io"

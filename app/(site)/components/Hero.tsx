@@ -22,7 +22,7 @@ export default function Hero() {
           fontWeight: 700,
         }}
       >
-        <span> Hi, I'm Tuhin -</span>
+        <span> Hi, I&apos;m Tuhin -</span>
         <span>I build great products.</span>
       </h1>
 
