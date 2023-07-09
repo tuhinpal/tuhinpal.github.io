@@ -7,10 +7,26 @@ import Footer from "@/components/Footer";
 
 const font = Montserrat({ subsets: ["latin"] });
 
+const title = "tuhin - I build web products";
+const description =
+  "I am a full-stack engineer from India with a focus on web technology.";
+
 export const metadata: Metadata = {
-  title: "tuhin - I build great products",
-  description:
-    "I am a full-stack engineer from India with a focus on web technology.",
+  title,
+  description,
+  openGraph: {
+    type: "website",
+    title,
+    description,
+    images: [
+      {
+        url: `/api/og?title=${encodeURIComponent(title)}`,
+        width: 1200,
+        height: 630,
+        alt: title,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
