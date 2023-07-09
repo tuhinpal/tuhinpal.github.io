@@ -1,9 +1,11 @@
 "use client";
 
-import Anchor from "@/components/Anchor";
-import Button from "@/components/Button";
 import Image from "next/image";
 import classNames from "classnames";
+
+import Anchor from "@/components/Anchor";
+import Button from "@/components/Button";
+import { works, ButtonTypes } from "@/data/works";
 
 export default function Works() {
   return (
@@ -68,12 +70,14 @@ export default function Works() {
                   href={link.url}
                   passHref
                   aria-label={link.title}
+                  target={link.url.startsWith("http") ? "_blank" : "_self"}
                   className={classNames(
                     "hover:rounded-full px-3 py-1 text-white",
                     {
-                      "bg-gray-800 hover:bg-gray-900": link.type === "primary",
+                      "bg-gray-800 hover:bg-gray-900":
+                        link.buttonType === ButtonTypes.PRIMARY,
                       "bg-gray-50 hover:bg-gray-100 text-black":
-                        link.type === "secondary",
+                        link.buttonType === ButtonTypes.SECONDARY,
                     }
                   )}
                 >
@@ -87,34 +91,3 @@ export default function Works() {
     </div>
   );
 }
-
-const works = [
-  {
-    name: "Devi AI",
-    description:
-      "Devi monitors keywords in Facebook groups, LinkedIn, Twitter, and Reddit, and outreach using Gpt-3 close deal. Devi also create and schedule content using AI on all social media profiles.",
-    image: "/images/works/devi/dash.png",
-    bgColor: "#eef6ff",
-    categories: [
-      "Chrome Extension",
-      "React",
-      "Next.js",
-      "Tailwind CSS",
-      "MongoDB",
-      "Node.js",
-    ],
-    isLatest: true,
-    links: [
-      {
-        title: "Website",
-        type: "primary",
-        url: "https://ddevi.com",
-      },
-      {
-        title: "Read more",
-        type: "secondary",
-        url: "/works/devi",
-      },
-    ],
-  },
-];
