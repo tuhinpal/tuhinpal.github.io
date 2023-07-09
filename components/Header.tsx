@@ -1,10 +1,10 @@
 "use client";
 
-import Button from "@/components/Button";
-import Logo from "./Logo";
-import SocialMedia from "./SocialMedia";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
+
+import Logo from "./Logo";
+import SocialMedia from "./SocialMedia";
 import Anchor from "./Anchor";
 
 export default function Header() {
@@ -27,7 +27,7 @@ export default function Header() {
       </div>
 
       <div className="w-1/3 flex justify-start md:justify-center">
-        <Logo width={120} height={30} className="dark:filter dark:invert" />
+        <Logo width={180} height={38} className="dark:filter dark:invert" />
       </div>
 
       <SocialMedia
