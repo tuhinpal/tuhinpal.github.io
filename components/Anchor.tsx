@@ -4,6 +4,8 @@ import Link, { LinkProps } from "next/link";
 export interface AnchorProps extends LinkProps {
   children: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
+  target?: string;
 }
 
 const Anchor = ({ children, className = "", ...props }: AnchorProps) => {

@@ -27,7 +27,12 @@ export default function Header() {
       </div>
 
       <div className="w-1/3 flex justify-start md:justify-center">
-        <Logo width={180} height={38} className="dark:filter dark:invert" />
+        <Anchor
+          href="/"
+          className="bg-transparent hover:bg-transparent outline-none hover:transform-none"
+        >
+          <Logo width={180} height={38} className="dark:filter dark:invert" />
+        </Anchor>
       </div>
 
       <SocialMedia

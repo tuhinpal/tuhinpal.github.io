@@ -5,6 +5,7 @@ import { ImLinkedin, ImGithub } from "react-icons/im";
 
 import Button from "@/components/Button";
 import { twMerge } from "tailwind-merge";
+import Anchor from "./Anchor";
 
 export interface SocialMediaProps extends BaseHTMLAttributes<HTMLDivElement> {
   className?: string;
@@ -19,13 +20,29 @@ const SocialMedia = ({
 }: SocialMediaProps) => {
   return (
     <div className={twMerge("flex items-center gap-3", className)}>
-      <Button style={buttonStyle}>
-        <ImLinkedin style={iconStyle} />
-      </Button>
+      <Anchor
+        href="https://www.linkedin.com/in/tuhinkantipal/"
+        className="group"
+        style={buttonStyle}
+        target="_blank"
+      >
+        <ImLinkedin
+          className="group-hover:text-blue-600 transition-all duration-200"
+          style={iconStyle}
+        />
+      </Anchor>
 
-      <Button style={buttonStyle}>
-        <ImGithub style={iconStyle} />
-      </Button>
+      <Anchor
+        href="https://github.com/tuhinpal"
+        className="group"
+        style={buttonStyle}
+        target="_blank"
+      >
+        <ImGithub
+          className="group-hover:text-black transition-all duration-200"
+          style={iconStyle}
+        />
+      </Anchor>
     </div>
   );
 };
