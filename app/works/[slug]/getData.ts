@@ -22,7 +22,7 @@ export interface WorkContentData {
 export async function getData(slug = "") {
   const workPath = path.join(process.cwd(), "data", "works", `${slug}.md`);
   const isExists = existsSync(workPath);
-  if (!isExists) throw new Error(`Work ${slug} not found`);
+  if (!isExists) return null;
 
   const workContent = readFileSync(workPath, "utf8");
   const data = matter(workContent) as WorkContent;

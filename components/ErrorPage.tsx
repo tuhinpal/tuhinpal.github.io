@@ -5,7 +5,7 @@ export default function ErrorPage({ message = "" }) {
     <div className="flex flex-col gap-5 items-center min-h-[81vh] py-16">
       <h1 className="text-4xl font-bold">Oh snap!</h1>
       <h2 className="text-lg max-w-xl text-center">
-        It says{" "}
+        Error:{" "}
         <span className="bg-red-50 text-red-500 px-2 border rounded-md">
           {message}
         </span>
