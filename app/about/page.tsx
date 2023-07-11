@@ -25,6 +25,9 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function About() {

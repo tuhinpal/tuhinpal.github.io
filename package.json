@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "20.4.0",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
     "@vercel/og": "^0.5.8",
@@ -29,6 +28,7 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "@types/markdown-it": "^12.2.3"
+    "@types/markdown-it": "^12.2.3",
+    "@types/node": "^20.4.1"
   }
 }

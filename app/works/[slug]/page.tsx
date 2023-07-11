@@ -38,6 +38,9 @@ export async function generateMetadata({
           },
         ],
       },
+      alternates: {
+        canonical: `/works/${params.slug}`,
+      },
     };
   } catch (error) {
     return {

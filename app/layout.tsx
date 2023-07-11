@@ -10,8 +10,12 @@ const font = Montserrat({ subsets: ["latin"] });
 const title = "tuhin - I build web products";
 const description =
   "I am a full-stack engineer from India with a focus on web technology.";
-
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_APP_URL ||
+      process.env.VERCEL_URL ||
+      `http://localhost:${process.env.PORT || 3000}`
+  ),
   title,
   description,
   openGraph: {
