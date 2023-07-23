@@ -33,12 +33,11 @@ export default function Works() {
 
           <div
             className={classNames(
-              `
-                flex flex-col items-start justify-end w-full h-full md:px-14 md:py-16 px-4 py-6 text-start absolute bottom-0
-                md:bg-gradient-to-tr md:via-transparent md:to-transparent
-                md:group-hover:backdrop-blur-sm md:group-hover:bg-gradient-to-tr
-                backdrop-blur-sm bg-gradient-to-tr 
-                md:backdrop-blur-none`,
+              `flex flex-col items-start justify-end w-full h-full md:px-14 md:py-16 px-4 py-6 text-start absolute bottom-0`,
+              `md:bg-gradient-to-tr md:via-transparent md:to-transparent`,
+              `md:group-hover:backdrop-blur-sm md:group-hover:bg-gradient-to-tr`,
+              `backdrop-blur-sm bg-gradient-to-tr`,
+              `md:backdrop-blur-none`,
               {
                 "md:from-pink-100 md:group-hover:from-pink-200 from-pink-200":
                   work.accentColorTW === "pink",
@@ -102,6 +101,34 @@ export default function Works() {
           </div>
         </div>
       ))}
+
+      <div
+        className={classNames(
+          "flex flex-col items-center justify-center rounded-2xl md:rounded-[52px] group overflow-hidden py-10 hover:shadow-xl transition-all duration-100 ease-in-out w-full",
+          "bg-gradient-to-r from-purple-100 to-purple-200",
+          "hover:from-purple-200 hover:to-purple-100"
+        )}
+      >
+        <h2
+          className={classNames(
+            "text-xl md:text-3xl font-bold leading-tight text-center text-transparent bg-clip-text transform transition-all duration-200 ease-in-out",
+            "bg-gradient-to-r from-purple-700 to-purple-400",
+            "group-hover:to-purple-700 group-hover:scale-105"
+          )}
+        >
+          I also contribute to open source projects.
+        </h2>
+
+        <Anchor
+          href="https://github.com/tuhinpal?tab=repositories&q=&type=&language=&sort=stargazers"
+          passHref
+          aria-label="GitHub"
+          target="_blank"
+          className="mt-6 px-3 py-1 md:px-4 md:py-2 text-purple-700 bg-transparent border-2 border-purple-700 hover:bg-purple-100 text-sm md:text-base"
+        >
+          Check out my GitHub
+        </Anchor>
+      </div>
     </div>
   );
 }
