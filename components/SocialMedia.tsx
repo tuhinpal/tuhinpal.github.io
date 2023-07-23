@@ -25,6 +25,7 @@ const SocialMedia = ({
         className="group"
         style={buttonStyle}
         target="_blank"
+        aria-label="LinkedIn profile"
       >
         <ImLinkedin
           className="group-hover:text-blue-600 transition-all duration-200"
@@ -37,6 +38,7 @@ const SocialMedia = ({
         className="group"
         style={buttonStyle}
         target="_blank"
+        aria-label="GitHub profile"
       >
         <ImGithub
           className="group-hover:text-black transition-all duration-200"

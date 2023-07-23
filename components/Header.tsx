@@ -16,11 +16,11 @@ export default function Header() {
     <header className="flex flex-row justify-between items-center w-full py-5 md:py-8">
       <div className="items-center gap-3 hidden md:flex w-1/3">
         {isAboutPage ? (
-          <Anchor className="text-lg" href={"/"}>
+          <Anchor className="text-lg" href={"/"} aria-label="Home page">
             Back to main
           </Anchor>
         ) : (
-          <Anchor className="text-lg" href={"/about"}>
+          <Anchor className="text-lg" href={"/about"} aria-label="About page">
             About
           </Anchor>
         )}
@@ -30,6 +30,7 @@ export default function Header() {
         <Anchor
           href="/"
           className="bg-transparent hover:bg-transparent outline-none p-0 -ml-3 md:ml-0"
+          aria-label="Home page"
         >
           <Logo width={180} height={38} className="dark:filter dark:invert" />
         </Anchor>

@@ -6,6 +6,7 @@ export interface AnchorProps extends LinkProps {
   className?: string;
   style?: React.CSSProperties;
   target?: string;
+  "aria-label"?: string;
 }
 
 const Anchor = ({ children, className = "", ...props }: AnchorProps) => {

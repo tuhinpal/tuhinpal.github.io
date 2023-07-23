@@ -18,6 +18,7 @@ export default function Footer() {
         <Anchor
           href="/"
           className="p-0 hover:bg-transparent bg-transparent outline-none"
+          aria-label="Home Page"
         >
           <Logo width={120} height={30} className="text-stone-600" />
         </Anchor>
@@ -29,11 +30,15 @@ export default function Footer() {
 
       <div className="flex items-center gap-3">
         {!isAboutPage ? (
-          <Anchor href="/about" className="text-stone-600">
+          <Anchor
+            href="/about"
+            className="text-stone-600"
+            aria-label="About Page"
+          >
             About me
           </Anchor>
         ) : (
-          <Anchor href="/" className="text-stone-600">
+          <Anchor href="/" className="text-stone-600" aria-label="Home Page">
             Home
           </Anchor>
         )}
