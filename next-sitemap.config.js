@@ -22,7 +22,7 @@ module.exports = {
       result.push({
         loc: `/works/${file.replace(".md", "")}`,
         changefreq: "daily",
-        lastmod: dayjs(parsed.data.lastUpdated).toDate(),
+        lastmod: dayjs(parsed.data.lastUpdated).toISOString(),
         priority: 1,
       });
     });
