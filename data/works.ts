@@ -76,11 +76,11 @@ export const works: WorksType = [
         buttonType: ButtonTypes.PRIMARY,
         url: "https://visadb.io",
       },
-      {
-        title: "Read more",
-        buttonType: ButtonTypes.SECONDARY,
-        url: "/works/visadb",
-      },
+      // {
+      //   title: "Read more",
+      //   buttonType: ButtonTypes.SECONDARY,
+      //   url: "/works/visadb",
+      // },
     ],
   },
 ];
