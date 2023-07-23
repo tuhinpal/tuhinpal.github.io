@@ -18,6 +18,28 @@ export const metadata: Metadata = {
   ),
   title,
   description,
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+    other: [
+      {
+        sizes: "16x16",
+        url: "/images/icons/16.png",
+      },
+      {
+        sizes: "32x32",
+        url: "/images/icons/32.png",
+      },
+      {
+        sizes: "192x192",
+        url: "/images/icons/192.png",
+      },
+      {
+        sizes: "512x512",
+        url: "/images/icons/512.png",
+      },
+    ],
+  },
   openGraph: {
     type: "website",
     title,
