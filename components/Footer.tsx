@@ -13,7 +13,7 @@ export default function Footer() {
   const isAboutPage = useMemo(() => pathname === "/about", [pathname]);
 
   return (
-    <header className="flex flex-wrap justify-center gap-2 sm:justify-between items-center w-full py-5 px-10 mt-7 mb-14 bg-neutral-100 rounded-[33px]">
+    <footer className="flex flex-wrap justify-center gap-2 sm:justify-between items-center w-full py-5 px-10 mt-7 mb-14 bg-neutral-100 rounded-[33px]">
       <div className="flex items-center gap-1">
         <Anchor
           href="/"
@@ -48,6 +48,6 @@ export default function Footer() {
           iconStyle={{ width: "1.5rem", height: "1.5rem" }}
         />
       </div>
-    </header>
+    </footer>
   );
 }
