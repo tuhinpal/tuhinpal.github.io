@@ -48,7 +48,7 @@ export const works: WorksType = [
         url: "https://ddevi.com",
       },
       {
-        title: "Read more",
+        title: "About Devi",
         buttonType: ButtonTypes.SECONDARY,
         url: "/works/devi",
       },
