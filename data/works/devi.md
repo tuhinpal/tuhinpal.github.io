@@ -5,8 +5,8 @@ description: Devi monitors keywords in Facebook groups, LinkedIn, Twitter, and R
 website: https://ddevi.com
 logo: /images/works/devi/logo.png
 role: Technology Lead & Full Stack Developer
-seoKeywords: one, two, three
-published: 22 June 2021
+seoKeywords: devi, devi ai, devi chrome extension, devi website, devi ai websi
+published: 22 June 2023
 lastUpdated: 22 June 2023
 tldr: [
     "Engineered a chrome extension that helps users to monitor keywords in Facebook groups, LinkedIn, Twitter, and Reddit.",
