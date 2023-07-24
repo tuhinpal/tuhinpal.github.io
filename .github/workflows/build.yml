@@ -2,36 +2,29 @@ name: Next.js Build & Publish to GitHub Pages
 
 on:
   push:
-    branches:
-      - master
+    branches: [ master ]
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+        
+      - uses: actions/setup-node@v3
         with:
-          node-version: '18.x'  
+          node-version: 16
+          cache: npm
 
-      - name: Install Dependencies
-        run: npm install
+      - name: Build
+        run: |
+          npm ci
+          npm run build
+          touch out/.nojekyll
 
-      - name: Build Next.js Static App
-        run: npm run build
-        env:
-          NODE_ENV: production
-          NEXT_PUBLIC_APP_URL: https://thetuhin.com
-
-      - name: Deploy to GitHub Pages
-        uses: s0/git-publish-subdir-action@develop
-        env:
-          REPO: self
-          BRANCH: gh-pages # The branch name where you want to push the assets
-          FOLDER: out # The directory where your assets are generated
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
-          MESSAGE: "Build: ({sha}) {msg}" # The commit message
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: out
