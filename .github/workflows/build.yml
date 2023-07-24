@@ -29,6 +29,8 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
+          git config --global user.email "bot@thetuhin.com"
+          git config --global user.name "tuhin-bot"      
           git checkout --orphan gh-pages
           mv ./out/* ./
           git add -A
