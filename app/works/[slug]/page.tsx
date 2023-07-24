@@ -35,16 +35,16 @@ export async function generateMetadata({
       title,
       description,
       authors: ["Tuhin Kanti Pal", "Danish Soomro"],
-      images: [
-        {
-          url: `/api/og?title=${encodeURIComponent(
-            `${data.data.name} - ${data.data.slogan}`
-          )}`,
-          width: 1200,
-          height: 630,
-          alt: title,
-        },
-      ],
+      // images: [
+      //   {
+      //     url: `/api/og?title=${encodeURIComponent(
+      //       `${data.data.name} - ${data.data.slogan}`
+      //     )}`,
+      //     width: 1200,
+      //     height: 630,
+      //     alt: title,
+      //   },
+      // ],
     },
     alternates: {
       canonical: `/works/${params.slug}`,

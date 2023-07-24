@@ -44,14 +44,14 @@ export const metadata: Metadata = {
     type: "website",
     title,
     description,
-    images: [
-      {
-        url: `/api/og?title=${encodeURIComponent(title)}`,
-        width: 1200,
-        height: 630,
-        alt: title,
-      },
-    ],
+    // images: [
+    //   {
+    //     url: `/api/og?title=${encodeURIComponent(title)}`,
+    //     width: 1200,
+    //     height: 630,
+    //     alt: title,
+    //   },
+    // ],
   },
 };
 
