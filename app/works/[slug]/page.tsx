@@ -6,6 +6,8 @@ import { getData } from "./getData";
 import { WorkContent } from "./components/Content";
 import FooterNav from "@/components/FooterNav";
 import { notFound } from "next/navigation";
+import { readdirSync } from "fs";
+import path from "path";
 
 export const dynamic = "force-static";
 
@@ -48,6 +50,14 @@ export async function generateMetadata({
       canonical: `/works/${params.slug}`,
     },
   };
+}
+
+export async function generateStaticParams() {
+  const files = readdirSync(path.join(process.cwd(), "data", "works"))
+    .filter((file) => file.endsWith(".md"))
+    .map((file) => file.replace(".md", ""));
+
+  return files.map((file) => ({ slug: file }));
 }
 
 export default async function Work({
