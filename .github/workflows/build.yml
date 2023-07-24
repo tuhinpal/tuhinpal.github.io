@@ -22,6 +22,9 @@ jobs:
           npm ci
           npm run build
           touch out/.nojekyll
+        env:
+          NODE_ENV: production
+          NEXT_PUBLIC_APP_URL: "https://thetuhin.com"
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
