@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npm run postbuild",
+    "build": "next build",
     "postbuild": "next-sitemap && node scripts/api-route-add.js",
     "start": "next start",
     "lint": "next lint"
