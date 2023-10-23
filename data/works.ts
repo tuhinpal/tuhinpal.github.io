@@ -24,6 +24,37 @@ export enum ButtonTypes {
 
 export const works: WorksType = [
   {
+    name: "Devi AI Website Builder",
+    description:
+      "Get a Landing Page and Website with AI for free in 10 seconds. No Coding Required. 100 years of hosting included. Get Hosting, Domain, SEO, Images, and Videos in seconds.",
+    image: "/images/works/devi-website/builder.jpg",
+    bgColor: "#ffffff",
+    accentColorTW: "yellow",
+    categories: [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "MongoDB",
+      "DSA",
+      "Node.js",
+      "Stripe",
+      "GPT-3",
+    ],
+    isLatest: true,
+    links: [
+      {
+        title: "Build website",
+        buttonType: ButtonTypes.PRIMARY,
+        url: "https://website.ddevi.com?utm_source=portfolio_tuhin&utm_medium=portfolio_tuhin&utm_campaign=portfolio_tuhin",
+      },
+      {
+        title: "Product Tour",
+        buttonType: ButtonTypes.SECONDARY,
+        url: "https://www.linkedin.com/feed/update/urn:li:activity:7110140083504107520/",
+      },
+    ],
+  },
+  {
     name: "Devi AI",
     description:
       "Devi monitors keywords in Facebook groups, LinkedIn, Twitter, and Reddit, and outreach using Gpt-3 close deal. Devi also create and schedule content using AI on all social media profiles.",
@@ -40,7 +71,7 @@ export const works: WorksType = [
       "Stripe",
       "GPT-3",
     ],
-    isLatest: true,
+    isLatest: false,
     links: [
       {
         title: "Website",

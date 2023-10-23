@@ -24,7 +24,7 @@ export default function Works() {
           </div>
 
           {work.isLatest && (
-            <div className="absolute md:top-14 md:left-14 top-4 left-4 z-10">
+            <div className="absolute md:top-14 md:left-14 top-4 right-4 z-10">
               <Button className="bg-gray-800 rounded-full px-4 py-2 text-white hover:bg-gray-800">
                 Latest
               </Button>
@@ -59,7 +59,16 @@ export default function Works() {
               }
             )}
           >
-            <h2 className="text-4xl font-bold leading-tight">{work.name}</h2>
+            <h2
+              className={classNames(
+                "text-3xl sm:text-4xl font-bold leading-tight",
+                {
+                  "mt-10": work.isLatest,
+                }
+              )}
+            >
+              {work.name}
+            </h2>
 
             <div className="mt-2.5 flex flex-wrap gap-x-3 gap-y-3">
               {work.categories.map((category) => (
@@ -76,7 +85,7 @@ export default function Works() {
               {work.description}
             </p>
 
-            <div className="mt-4 gap-3 flex md:hidden group-hover:flex">
+            <div className="mt-4 gap-x-3 gap-y-2 flex md:hidden group-hover:flex flex-wrap">
               {work.links.map((link) => (
                 <Anchor
                   key={link.title}
