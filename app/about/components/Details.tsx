@@ -41,7 +41,7 @@ export default function AboutDetails() {
       <div className="flex items-center gap-4 mt-2">
         <Button
           className="bg-gray-900 text-white hover:rounded-full hover:bg-gray-700"
-          title="Mail me"
+          title="Mail me at: me@thetuhin.com"
           onClick={() => {
             window.open("mailto:me@thetuhin.com");
           }}
@@ -49,7 +49,20 @@ export default function AboutDetails() {
           Email me
         </Button>
 
-        <Button className="bg-gray-100 hover:rounded-full">Download CV</Button>
+        <Button
+          className="bg-gray-100 hover:rounded-full"
+          onClick={() => {
+            const ask = confirm(
+              "Sorry, for the native confirm dialog. I am moving very fast so the resume is changing very frequently. However you can check my Github profile (click ok to navigate)."
+            );
+
+            if (ask) {
+              window.open("https://github.com/tuhinpal");
+            }
+          }}
+        >
+          Resume
+        </Button>
       </div>
     </div>
   );
