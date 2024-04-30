@@ -56,6 +56,9 @@ export default function Works() {
 
                 "md:from-red-100 md:group-hover:from-red-200 from-red-200":
                   work.accentColorTW === "red",
+
+                "md:from-gray-100 md:group-hover:from-gray-200 from-gray-200":
+                  work.accentColorTW === "gray",
               }
             )}
           >

@@ -24,6 +24,38 @@ export enum ButtonTypes {
 
 export const works: WorksType = [
   {
+    name: "Makereels.ai",
+    description:
+      "Effortlessly generates and schedules captivating reels using text prompts, saving you time while boosting engagement. Ideal for marketers and content creators seeking efficiency and creativity.",
+    image: "/images/works/makereels/edit.jpg",
+    bgColor: "#ffffff",
+    accentColorTW: "gray",
+    categories: [
+      "React",
+      "Canvas",
+      "Next.js",
+      "Tailwind CSS",
+      "MongoDB",
+      "DSA",
+      "Node.js",
+      "Stripe",
+      "GPT-4",
+    ],
+    isLatest: true,
+    links: [
+      {
+        title: "Create a Reel",
+        buttonType: ButtonTypes.PRIMARY,
+        url: "https://makereels.ai?utm_source=portfolio_tuhin&utm_medium=portfolio_tuhin&utm_campaign=portfolio_tuhin",
+      },
+      {
+        title: "Product Tour",
+        buttonType: ButtonTypes.SECONDARY,
+        url: "https://www.linkedin.com/posts/tuhinkantipal_innovation-contentcreation-deviai-activity-7168647437505454081-zpLz?utm_source=share&utm_medium=member_desktop",
+      },
+    ],
+  },
+  {
     name: "Devi AI Website Builder",
     description:
       "Get a Landing Page and Website with AI for free in 10 seconds. No Coding Required. 100 years of hosting included. Get Hosting, Domain, SEO, Images, and Videos in seconds.",
@@ -40,7 +72,7 @@ export const works: WorksType = [
       "Stripe",
       "GPT-3",
     ],
-    isLatest: true,
+    isLatest: false,
     links: [
       {
         title: "Build website",
