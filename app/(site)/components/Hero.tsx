@@ -26,7 +26,7 @@ export default function Hero() {
         <span>I build web products.</span>
       </h1>
 
-      <Anchor href="/about" className="flex md:hidden" aria-label="About Page">
+      <Anchor href="/about" aria-label="About Page">
         About Me
       </Anchor>
     </div>
