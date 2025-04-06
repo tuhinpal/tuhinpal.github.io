@@ -24,6 +24,36 @@ export enum ButtonTypes {
 
 export const works: WorksType = [
   {
+    name: "Bookeeping.ai",
+    description:
+      "Automate 95% of Bookkeeping using AI Powered Accounting Assistant.",
+    image: "https://assets.bookeeping.ai/shots-v1/general-ledger.jpg",
+    bgColor: "#ffffff",
+    accentColorTW: "gray",
+    categories: [
+      "Next.js",
+      "Tailwind CSS",
+      "MongoDB",
+      "Node.js",
+      "Stripe",
+      "OpenAI",
+      "Plaid"
+    ],
+    isLatest: false,
+    links: [
+      {
+        title: "Automate Now",
+        buttonType: ButtonTypes.PRIMARY,
+        url: "https://bookeeping.ai?utm_source=portfolio_tuhin&utm_medium=portfolio_tuhin&utm_campaign=portfolio_tuhin",
+      },
+      {
+        title: "Product Demo",
+        buttonType: ButtonTypes.SECONDARY,
+        url: "https://assets.bookeeping.ai/help/3.mp4?utm_source=portfolio_tuhin&utm_medium=portfolio_tuhin&utm_campaign=portfolio_tuhin",
+      },
+    ],
+  },
+   {
     name: "Makereels.ai",
     description:
       "Effortlessly generates and schedules captivating reels using text prompts, saving you time while boosting engagement. Ideal for marketers and content creators seeking efficiency and creativity.",
@@ -41,7 +71,7 @@ export const works: WorksType = [
       "Stripe",
       "GPT-4",
     ],
-    isLatest: true,
+    isLatest: false,
     links: [
       {
         title: "Create a Reel",
