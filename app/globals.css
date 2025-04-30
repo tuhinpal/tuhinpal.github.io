@@ -59,4 +59,8 @@ body {
   .article img {
     @apply my-4 rounded-2xl lg:my-12 lg:transform lg:scale-[115%];
   }
+
+  .article video {
+    @apply my-4 rounded-2xl lg:my-12 lg:transform lg:scale-[115%];
+  }
 }

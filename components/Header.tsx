@@ -32,7 +32,7 @@ export default function Header() {
           className="bg-transparent hover:bg-transparent outline-none p-0 -ml-3 md:ml-0"
           aria-label="Home page"
         >
-          <Logo width={180} height={38} className="dark:filter dark:invert" />
+          <Logo width={180} height={38} />
         </Anchor>
       </div>
 

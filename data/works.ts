@@ -37,7 +37,7 @@ export const works: WorksType = [
       "Node.js",
       "Stripe",
       "OpenAI",
-      "Plaid"
+      "Plaid",
     ],
     isLatest: false,
     links: [
@@ -47,13 +47,13 @@ export const works: WorksType = [
         url: "https://bookeeping.ai?utm_source=portfolio_tuhin&utm_medium=portfolio_tuhin&utm_campaign=portfolio_tuhin",
       },
       {
-        title: "Product Demo",
+        title: "About Bookeeping",
         buttonType: ButtonTypes.SECONDARY,
-        url: "https://assets.bookeeping.ai/help/3.mp4?utm_source=portfolio_tuhin&utm_medium=portfolio_tuhin&utm_campaign=portfolio_tuhin",
+        url: "/works/bookeeping",
       },
     ],
   },
-   {
+  {
     name: "Makereels.ai",
     description:
       "Effortlessly generates and schedules captivating reels using text prompts, saving you time while boosting engagement. Ideal for marketers and content creators seeking efficiency and creativity.",
