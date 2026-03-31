@@ -66,6 +66,21 @@ export default function PartnerQuiz() {
   const inputRef = useRef(null);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const styleTag = document.createElement("style");
+    styleTag.textContent = `
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Caveat:wght@400;600&family=DM+Sans:wght@400;500;700&display=swap');
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      @keyframes floatIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+      @keyframes slideIn { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
+      @keyframes slideOut { from { opacity: 1; transform: translateX(0); } to { opacity: 0; transform: translateX(-40px); } }
+      input::placeholder { color: #c4b5a5; }
+      ::-webkit-scrollbar { width: 4px; }
+      ::-webkit-scrollbar-thumb { background: #ddd0c3; border-radius: 4px; }
+    `;
+    document.head.appendChild(styleTag);
+
     const params = new URLSearchParams(window.location.search);
     const d = params.get("d");
     if (d) {
@@ -360,15 +375,3 @@ const S = {
   resultRow: { background: "#fff", borderRadius: 12, padding: "12px 14px", marginBottom: 8, boxShadow: "0 1px 6px rgba(61,44,30,0.04)", textAlign: "left" },
 };
 
-const styleTag = document.createElement("style");
-styleTag.textContent = `
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Caveat:wght@400;600&family=DM+Sans:wght@400;500;700&display=swap');
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  @keyframes floatIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-  @keyframes slideIn { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
-  @keyframes slideOut { from { opacity: 1; transform: translateX(0); } to { opacity: 0; transform: translateX(-40px); } }
-  input::placeholder { color: #c4b5a5; }
-  ::-webkit-scrollbar { width: 4px; }
-  ::-webkit-scrollbar-thumb { background: #ddd0c3; border-radius: 4px; }
-`;
-document.head.appendChild(styleTag);
